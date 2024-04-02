@@ -19,12 +19,11 @@
   "files": [
     "lib"
   ],
-  "main": "./lib/vue-modern-cropper.umd.cjs",
-  "module": "./lib/vue-modern-cropper.js",
+  "main": "./lib/vue-modern-cropper.mjs",
+  "module": "./lib/vue-modern-cropper.mjs",
   "exports": {
     ".": {
-      "import": "./lib/vue-modern-cropper.js",
-      "require": "./lib/vue-modern-cropper.umd.cjs",
+      "import": "./lib/vue-modern-cropper.mjs",
       "types": "./lib/index.d.ts"
     }
   },
