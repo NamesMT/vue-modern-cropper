@@ -24,21 +24,29 @@
       </nav>
       <header class="py-20">
         <div class="font-extrabold">
-          <span class="text-6xl text-neon">Build your own</span>
-          <div class="text-6xl text-primary">Vue Component Library</div>
+          <span class="text-6xl text-neon">Looking for a modern cropper?</span>
+          <div class="text-6xl text-primary">Vue Modern Cropper</div>
         </div>
         <div
           class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200"
         >
           Power-packed wrapper over cropperjs@next
         </div>
-        <div class="flex gap-4 mt-8">
+        <div
+          class="text-xl italic font-semibold text-slate-700 py-4 dark:text-slate-200"
+        >
+        <p>Why "modern cropper"?</p>
+        <p>It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free, easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span></p>
+        <p>So I created this.</p>
+        <p class="text-base">btw it also supports Nuxt</p>
+        </div>
+        <!-- <div class="flex gap-4 mt-8">
           <a
             class="bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold py-3 px-6 w-full sm:w-auto text-center"
             href="https://github.com/NamesMT/vue-modern-cropper"
             target="_blank"
           >
-            <span>Documentation</span>
+            <span>See Github repo</span>
           </a>
           <a
             class="bg-emerald-400 hover:bg-emerald-500 flex items-center justify-center space-x-3 transition rounded-full text-white text-lg font-semibold py-3 px-6 w-full sm:w-auto cursor-pointer"
@@ -47,7 +55,7 @@
           >
             <span>Use the template</span>
           </a>
-        </div>
+        </div> -->
       </header>
 
       <main class="grid grid-cols-1 gap-8 text-xs 2xl:text-sm">
