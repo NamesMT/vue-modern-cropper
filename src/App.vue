@@ -82,7 +82,7 @@ onMounted(() => {
           <p>It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
             easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span></p>
           <p>So I created this.</p>
-          <p class="text-base">btw it also supports Nuxt</p>
+          <p class="text-base">btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-#00DC82 text-xl">Nuxt</b></a></p>
         </div>
         <!-- <div class="flex gap-4 mt-8">
           <a
