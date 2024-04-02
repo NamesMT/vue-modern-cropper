@@ -96,6 +96,9 @@ export default defineConfig(({ command, mode }) => {
   }
 
   return {
+    build: {
+      outDir: 'docs'
+    },
     resolve: {
       alias: {
         '@': resolve(__dirname, '/packages'),
