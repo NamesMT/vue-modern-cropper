@@ -16,7 +16,39 @@ onMounted(() => {
     cropper.value.cropper
 })
 
-const demoCode0 = `a`
+const demoCode0 = `
+// Register it globally
+import { ModernCropper } from 'vue-modern-cropper'
+Vue.component(ModernCropper)
+
+/* SomeComponent.vue */
+// Or you could import it locally
+import { ModernCropper } from 'vue-modern-cropper'
+
+// Use InstanceType to infer the exposed props
+const cropper = ref<InstanceType<typeof ModernCropper>>()
+
+onMounted(() => {
+  // remember to await nextTick if you use Nuxt (Nuxt client component caveat)
+  await nextTick()
+
+  // Use onCropperMounted to execute hooks as soon as the cropper APIs is available
+  cropper.value!.onCropperMounted(({ cropper, image, canvas, selection, selections }) => {
+    selection.$toCanvas().then(canvas => console.log('cropped:', canvas.toDataURL()))
+  })
+
+  // Or access them directly through the ref, you need to make sure they are available though
+  if (cropper.value.cropperMounted)
+    cropper.value.cropper
+})
+...
+<ModernCropper
+  ref="cropper"
+  :src="imgSrc"
+>
+</ModernCropper>
+...
+`
 </script>
 
 <template>
