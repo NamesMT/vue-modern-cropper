@@ -19,7 +19,11 @@ export default defineConfig(({ command, mode }) => {
   let userConfig: UserConfig = {}
 
   const commonPlugins = [
-    vue(),
+    vue({
+      script: {
+        propsDestructure: true
+      }
+    }),
     UnoCSS(),
     Components({
       resolvers: [
@@ -33,9 +37,10 @@ export default defineConfig(({ command, mode }) => {
 
   if (mode === 'lib') {
     userConfig.build = {
+      target: 'esnext',
       lib: {
         entry: resolve(__dirname, 'packages/index.ts'),
-        name: 'VueLibraryStarter',
+        name: 'ModernCropper',
         fileName: 'vue-modern-cropper'
       },
       outDir: 'lib',
@@ -46,12 +51,8 @@ export default defineConfig(({ command, mode }) => {
         external: ['vue'],
         output: [
           {
-            format: 'cjs',
-            entryFileNames: `vue-modern-cropper.cjs`
-          },
-          {
             format: 'es',
-            entryFileNames: `vue-modern-cropper.js`,
+            entryFileNames: `vue-modern-cropper.mjs`,
             preserveModules: false
           }
         ]

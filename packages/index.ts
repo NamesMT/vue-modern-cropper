@@ -1,1 +1,3 @@
-export { default as MyComponent } from './MyComponent.vue'
+import ModernCropper from './ModernCropper.vue'
+
+export { ModernCropper }

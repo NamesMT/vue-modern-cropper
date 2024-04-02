@@ -21,61 +21,50 @@
 
 - [Vue Modern Cropper](#vue-modern-cropper)
   - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Use the Template](#use-the-template)
-    - [GitHub Template](#github-template)
-    - [Clone to local](#clone-to-local)
   - [Usage](#usage)
-    - [1、Install dependencies](#1install-dependencies)
-    - [2、Build a library](#2build-a-library)
-    - [3、Publish to npm](#3publish-to-npm)
   - [License](#license)
 
 </details>
 
-## Features
-
-- Package manager [pnpm](https://pnpm.js.org/), safe and fast
-- Bundle with the [library mode](https://vitejs.dev/guide/build.html#library-mode)
-- Release with [semantic-release](https://www.npmjs.com/package/semantic-release)
-- Publish to [npm](https://docs.npmjs.com/cli/v8/commands/npm-publish)
-
-## Use the Template
-
-### GitHub Template
-
-[create a repo from this template on GitHub](https://github.com/new?template_name=vue-modern-cropper&template_owner=NamesMT)
-
-### Clone to local
-
-```bash
-git clone https://github.com/NamesMT/vue-modern-cropper
-
-cd vue-modern-cropper
-```
-
 ## Usage
-
-Building it is as easy as 1, 2, 3.
-
-### 1、Install dependencies
-
-```bash
-pnpm install
+```sh
+# Install it
+pnpm add vue-modern-cropper
 ```
 
-### 2、Build a library
+```ts
+// Register it globally
+import { ModernCropper } from 'vue-modern-cropper'
+Vue.component(ModernCropper)
 
-Rename all the `vue-modern-cropper` to your component name in the file `package.json、vite.config.ts`, eg: `my-component`
+/* SomeComponent.vue */
+// Or you could import it locally
+import { ModernCropper } from 'vue-modern-cropper'
 
-```bash
-pnpm run build:lib
-```
+// Use InstanceType to infer the exposed props
+const cropper = ref<InstanceType<typeof ModernCropper>>()
 
-### 3、Publish to npm
+onMounted(() => {
+  // remember to await nextTick if you use Nuxt (Nuxt client component caveat)
+  await nextTick()
 
-```
-npm publish
+  // Use onCropperMounted to execute hooks as soon as the cropper APIs is available
+  cropper.value!.onCropperMounted(({ cropper, image, canvas, selection, selections }) => {
+    selection.$toCanvas().then(canvas => console.log('cropped:', canvas.toDataURL()))
+  })
+
+  // Or access them directly through the ref, you need to make sure they are available though
+  if (cropper.value.cropperMounted)
+    cropper.value.cropper
+})
+...
+<ModernCropper
+  ref="cropper"
+  :src="imgSrc"
+>
+</ModernCropper>
+...
+
 ```
 
 ## License

@@ -1,3 +1,24 @@
+<script lang="ts" setup>
+import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
+import { ModernCropper } from '../packages'
+import { onMounted, ref } from 'vue';
+
+function sleep(milliseconds: number): Promise<void> {
+  return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
+}
+
+const srcImg = ref('https://i.imgur.com/5BYAJlz.png')
+sleep(5000).then(() => srcImg.value = 'https://i.imgur.com/ISGwgk9.png')
+const cropper = ref<InstanceType<typeof ModernCropper>>()
+
+onMounted(() => {
+  if (cropper.value?.cropperMounted)
+    cropper.value.cropper
+})
+
+const demoCode0 = `a`
+</script>
+
 <template>
   <div class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900">
     <div class="container mx-auto max-w-5xl relative">
@@ -7,17 +28,11 @@
           Vue Modern Cropper
         </div>
         <div class="flex-center gap-4">
-          <button
-            class="!bg-transparent opacity-50 hover:opacity-100 transition"
-            @click="(e) => toggleDarkmode()"
-          >
+          <button class="!bg-transparent opacity-50 hover:opacity-100 transition" @click="(e) => toggleDarkmode()">
             <carbon:moon class="w-6 h-6" v-if="isDark" />
             <carbon:sun class="w-6 h-6" v-else />
           </button>
-          <a
-            class="opacity-50 hover:opacity-100 transition"
-            href="https://github.com/NamesMT/vue-modern-cropper"
-          >
+          <a class="opacity-50 hover:opacity-100 transition" href="https://github.com/NamesMT/vue-modern-cropper">
             <carbon:logo-github class="h-6 w-6" />
           </a>
         </div>
@@ -25,20 +40,17 @@
       <header class="py-20">
         <div class="font-extrabold">
           <span class="text-6xl text-neon">Looking for a modern cropper?</span>
-          <div class="text-6xl text-primary">Vue Modern Cropper</div>
+          <div class="text-6xl text-primary flex gap-2"><Logo class="w-15 h-15" />Vue Modern Cropper</div>
         </div>
-        <div
-          class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200"
-        >
+        <div class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200">
           Power-packed wrapper over cropperjs@next
         </div>
-        <div
-          class="text-xl italic font-semibold text-slate-700 py-4 dark:text-slate-200"
-        >
-        <p>Why "modern cropper"?</p>
-        <p>It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free, easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span></p>
-        <p>So I created this.</p>
-        <p class="text-base">btw it also supports Nuxt</p>
+        <div class="text-xl italic font-semibold text-slate-700 py-4 dark:text-slate-200">
+          <p>Why "modern cropper"?</p>
+          <p>It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
+            easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span></p>
+          <p>So I created this.</p>
+          <p class="text-base">btw it also supports Nuxt</p>
         </div>
         <!-- <div class="flex gap-4 mt-8">
           <a
@@ -59,17 +71,14 @@
       </header>
 
       <main class="grid grid-cols-1 gap-8 text-xs 2xl:text-sm">
-        <Highlight
-          :autodetect="false"
-          language="javascript"
-          :code="demoCode0"
-        />
+        <Highlight :autodetect="false" language="javascript" :code="demoCode0" />
       </main>
 
-      <footer
-        class="mt-16 w-full flex-center text-primary"
-        text="slate-900 dark:slate-300 opacity-60 sm"
-      >
+      <div class="my-2">
+        <ModernCropper :src="srcImg" class="h-40"/>
+      </div>
+
+      <footer class="mt-16 w-full flex-center text-primary" text="slate-900 dark:slate-300 opacity-60 sm">
         <div class="copyright flex flex-col justify-center items-center">
           <p>
             Code with ❤ & ☕️ by
@@ -81,33 +90,21 @@
           <p class="flex items-center space-x-1">
             <carbon:logo-twitter class="text-emerald-500" />
             <span>
-              <a
-                href="https://twitter.com/NamesMT"
-                class="text-neon"
-                target="_blank"
-              >
+              <a href="https://twitter.com/NamesMT" class="text-neon" target="_blank">
                 Follow me on Twitter
               </a>
             </span>
             <span class="px-2 text-emerald-300">|</span>
             <carbon:cafe class="text-emerald-500" />
             <span>
-              <a
-                href="https://www.buymeacoffee.com/xlbd"
-                target="_blank"
-                class="text-neon"
-              >
+              <a href="https://www.buymeacoffee.com/xlbd" target="_blank" class="text-neon">
                 Buy me a coffee
               </a>
             </span>
             <span class="px-2 text-emerald-300">|</span>
             <mdi:heart class="text-emerald-500" />
             <span>
-              <a
-                href="https://github.com/sponsors/NamesMT"
-                target="_blank"
-                class="text-neon"
-              >
+              <a href="https://github.com/sponsors/NamesMT" target="_blank" class="text-neon">
                 Sponsor me on GitHub
               </a>
             </span>
@@ -119,26 +116,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
-
-const demoCode0 = `# install dependencies
-> pnpm install
-
-# start the doc app with HMR
-> pnpm run dev
-
-# build the doc app, available under /dist
-> pnpm run build:docs
-
-# build the library, available under /lib
-> pnpm run build:lib
-
-# create the changelog
-> pnpm run changelog
-`
-</script>
 
 <style lang="scss">
 @import '~/assets/highlight.scss';
