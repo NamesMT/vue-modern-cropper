@@ -1,17 +1,17 @@
-# Vue Library Starter
+# Vue Modern Cropper
 
 [![NPM][npmBadge]][npmUrl]
 [![Minzip Package][bundlePhobiaBadge]][bundlePhobiaUrl]
 [![NPM Download][npmDtBadge]][npmDtUrl]
 
-[npmBadge]: https://img.shields.io/npm/v/vue-library-starter.svg?maxAge=2592000
-[npmUrl]: https://www.npmjs.com/package/vue-library-starter
-[npmDtBadge]: https://img.shields.io/npm/dt/vue-library-starter.svg
-[npmDtUrl]: https://www.npmjs.com/package/vue-library-starter
-[bundlePhobiaBadge]: https://img.shields.io/bundlephobia/minzip/vue-library-starter
-[bundlePhobiaUrl]: https://bundlephobia.com/package/vue-library-starter@latest
+[npmBadge]: https://img.shields.io/npm/v/vue-modern-cropper.svg?maxAge=2592000
+[npmUrl]: https://www.npmjs.com/package/vue-modern-cropper
+[npmDtBadge]: https://img.shields.io/npm/dt/vue-modern-cropper.svg
+[npmDtUrl]: https://www.npmjs.com/package/vue-modern-cropper
+[bundlePhobiaBadge]: https://img.shields.io/bundlephobia/minzip/vue-modern-cropper
+[bundlePhobiaUrl]: https://bundlephobia.com/package/vue-modern-cropper@latest
 
-> A minimal Vue library starter, built on top of Vite & Vue 3
+> Power-packed wrapper over cropperjs@next
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@
 
 <summary>TOC</summary>
 
-- [Vue Library Starter](#vue-library-starter)
+- [Vue Modern Cropper](#vue-modern-cropper)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Use the Template](#use-the-template)
@@ -44,14 +44,14 @@
 
 ### GitHub Template
 
-[create a repo from this template on GitHub](https://github.com/new?template_name=vue-library-starter&template_owner=xiaoluoboding)
+[create a repo from this template on GitHub](https://github.com/new?template_name=vue-modern-cropper&template_owner=NamesMT)
 
 ### Clone to local
 
 ```bash
-git clone https://github.com/xiaoluoboding/vue-library-starter
+git clone https://github.com/NamesMT/vue-modern-cropper
 
-cd vue-library-starter
+cd vue-modern-cropper
 ```
 
 ## Usage
@@ -66,7 +66,7 @@ pnpm install
 
 ### 2、Build a library
 
-Rename all the `vue-library-starter` to your component name in the file `package.json、vite.config.ts`, eg: `my-component`
+Rename all the `vue-modern-cropper` to your component name in the file `package.json、vite.config.ts`, eg: `my-component`
 
 ```bash
 pnpm run build:lib
@@ -80,4 +80,4 @@ npm publish
 
 ## License
 
-MIT [@xiaoluoboding](https://github.com/xiaoluoboding)
+MIT [@NamesMT](https://github.com/NamesMT)

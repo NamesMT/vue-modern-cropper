@@ -36,7 +36,7 @@ export default defineConfig(({ command, mode }) => {
       lib: {
         entry: resolve(__dirname, 'packages/index.ts'),
         name: 'VueLibraryStarter',
-        fileName: 'vue-library-starter'
+        fileName: 'vue-modern-cropper'
       },
       outDir: 'lib',
       emptyOutDir: true,
@@ -47,11 +47,11 @@ export default defineConfig(({ command, mode }) => {
         output: [
           {
             format: 'cjs',
-            entryFileNames: `vue-library-starter.cjs`
+            entryFileNames: `vue-modern-cropper.cjs`
           },
           {
             format: 'es',
-            entryFileNames: `vue-library-starter.js`,
+            entryFileNames: `vue-modern-cropper.js`,
             preserveModules: false
           }
         ]

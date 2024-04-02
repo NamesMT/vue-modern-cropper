@@ -1,9 +1,9 @@
 {
-  "name": "vue-library-starter",
-  "description": "A minimal Vue library starter, built on top of Vite & Vue 3",
+  "name": "vue-modern-cropper",
+  "description": "Power-packed wrapper over cropperjs@next",
   "version": "0.0.1",
   "type": "module",
-  "author": "xiaoluoboding <xiaoluoboding@gmail.com>",
+  "author": "NamesMT <dangquoctrung123@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build:docs": "vite build --mode docs",
@@ -13,18 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiaoluoboding/vue-library-starter.git"
+    "url": "git+https://github.com/NamesMT/vue-modern-cropper.git"
   },
-  "homepage": "https://github.com/xiaoluoboding/vue-library-starter",
+  "homepage": "https://github.com/NamesMT/vue-modern-cropper",
   "files": [
     "lib"
   ],
-  "main": "./lib/vue-library-starter.umd.cjs",
-  "module": "./lib/vue-library-starter.js",
+  "main": "./lib/vue-modern-cropper.umd.cjs",
+  "module": "./lib/vue-modern-cropper.js",
   "exports": {
     ".": {
-      "import": "./lib/vue-library-starter.js",
-      "require": "./lib/vue-library-starter.umd.cjs",
+      "import": "./lib/vue-modern-cropper.js",
+      "require": "./lib/vue-modern-cropper.umd.cjs",
       "types": "./lib/index.d.ts"
     }
   },

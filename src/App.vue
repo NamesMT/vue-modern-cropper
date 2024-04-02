@@ -4,7 +4,7 @@
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
           <Logo class="h-6 w-6" />
-          Vue Library Starter
+          Vue Modern Cropper
         </div>
         <div class="flex-center gap-4">
           <button
@@ -16,7 +16,7 @@
           </button>
           <a
             class="opacity-50 hover:opacity-100 transition"
-            href="https://github.com/xiaoluoboding/vue-library-starter"
+            href="https://github.com/NamesMT/vue-modern-cropper"
           >
             <carbon:logo-github class="h-6 w-6" />
           </a>
@@ -30,19 +30,19 @@
         <div
           class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200"
         >
-          A minimal Vue library starter, built on top of Vite & Vue 3
+          Power-packed wrapper over cropperjs@next
         </div>
         <div class="flex gap-4 mt-8">
           <a
             class="bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold py-3 px-6 w-full sm:w-auto text-center"
-            href="https://github.com/xiaoluoboding/vue-library-starter"
+            href="https://github.com/NamesMT/vue-modern-cropper"
             target="_blank"
           >
             <span>Documentation</span>
           </a>
           <a
             class="bg-emerald-400 hover:bg-emerald-500 flex items-center justify-center space-x-3 transition rounded-full text-white text-lg font-semibold py-3 px-6 w-full sm:w-auto cursor-pointer"
-            href="https://github.com/new?template_name=vue-library-starter&template_owner=xiaoluoboding"
+            href="https://github.com/new?template_name=vue-modern-cropper&template_owner=NamesMT"
             target="_blank"
           >
             <span>Use the template</span>
@@ -65,8 +65,8 @@
         <div class="copyright flex flex-col justify-center items-center">
           <p>
             Code with ❤ & ☕️ by
-            <a class="text-neon" href="https://github.com/xiaoluoboding">
-              @xiaoluoboding
+            <a class="text-neon" href="https://github.com/NamesMT">
+              @NamesMT
             </a>
             <span> © {{ new Date().getFullYear() }}</span>
           </p>
@@ -74,7 +74,7 @@
             <carbon:logo-twitter class="text-emerald-500" />
             <span>
               <a
-                href="https://twitter.com/xiaoluoboding"
+                href="https://twitter.com/NamesMT"
                 class="text-neon"
                 target="_blank"
               >
@@ -96,7 +96,7 @@
             <mdi:heart class="text-emerald-500" />
             <span>
               <a
-                href="https://github.com/sponsors/xiaoluoboding"
+                href="https://github.com/sponsors/NamesMT"
                 target="_blank"
                 class="text-neon"
               >
