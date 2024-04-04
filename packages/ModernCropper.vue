@@ -49,9 +49,6 @@ function onCropperMounted(hook: CropperHook) {
 onMounted(async () => {
   await nextTick()
 
-  console.log({ id })
-  console.log(document.getElementById(id))
-
   cropper.value = new Cropper(document.getElementById(id) as HTMLImageElement)
   image.value = cropper.value.getCropperImage()
   canvas.value = cropper.value.getCropperCanvas()
