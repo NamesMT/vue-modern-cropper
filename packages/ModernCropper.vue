@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import Cropper from 'cropperjs'
-import { nextTick, onMounted, reactive, ref, watch, type UnwrapNestedRefs } from 'vue'
-import type { RequireAllOrNone, SetNonNullable } from 'type-fest'
-
-function sleep(milliseconds: number): Promise<void> {
-  return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
-}
+import { nextTick, onMounted, reactive, ref, watch } from 'vue'
+import type { SetNonNullable } from 'type-fest'
 
 const {
   id = `ModernCropper${Math.random()}`,
@@ -16,6 +12,10 @@ const {
   src?: string
   crossorigin?: 'anonymous' | 'use-credentials'
 }>()
+
+function sleep(milliseconds: number): Promise<void> {
+  return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
+}
 
 const cropper = ref<Cropper>()
 const image = ref<ReturnType<Cropper['getCropperImage']>>()
