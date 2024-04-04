@@ -9,7 +9,8 @@
     "build:docs": "vite build --mode docs",
     "build:lib": "vite build --mode lib && vue-tsc -p tsconfig.build.json",
     "preview": "vite preview",
-    "release": "pnpm dlx changelogen@latest --release --push --publish"
+    "release": "pnpm dlx changelogen@latest --release --push --publish",
+    "prerelease": "pnpm run build:lib"
   },
   "repository": {
     "type": "git",
