@@ -57,7 +57,7 @@ onMounted(() => {
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
           <Logo class="h-6 w-6" />
-          Vue Modern Cropper
+          <span class="text-#327959">Vue</span>Modern Cropper
         </div>
         <div class="flex-center gap-4">
           <button class="!bg-transparent opacity-50 hover:opacity-100 transition" @click="(e) => toggleDarkmode()">
@@ -106,7 +106,8 @@ onMounted(() => {
         <Highlight :autodetect="false" language="javascript" :code="demoCode0" />
       </main>
 
-      <div class="my-2">
+      <div class="my-2 text-primary">
+        Check out cropperjs@next document: <a href="https://fengyuanchen.github.io/cropperjs/v2/api/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/v2/api/</a>
         <ModernCropper :src="srcImg" class="h-40"/>
       </div>
 

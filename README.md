@@ -27,7 +27,7 @@
 </details>
 
 ## NOTE!!
-`vue-modern-cropper` uses `cropperjs@next` (v2), which is not yet stable release and is missing a lot of documentations, if you use the package in the current time, prepare to dive into `cropperjs@next` source code / type defs to figure out the APIs.
+`vue-modern-cropper` uses `cropperjs@next` (v2), which is not yet stable release, you can check it's documentation [HERE](https://fengyuanchen.github.io/cropperjs/v2/api/)
 
 Feel free to submit PRs to add helper functions.
 
