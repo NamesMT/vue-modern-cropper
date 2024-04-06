@@ -66,9 +66,16 @@ onMounted(() => {
 ...
 <ModernCropper
   ref="cropper"
+  class="w-80 h-40"
   :src="imgSrc"
->
-</ModernCropper>
+  :pass-through="{
+    cropper: { constructOptions: undefined },
+    image: { attributes: { class: 'blur' } },
+    canvas: { attributes: { background: false } },
+    selection: { attributes: undefined },
+    selections: { attributes: undefined },
+  }"
+/>
 ...
 
 ```

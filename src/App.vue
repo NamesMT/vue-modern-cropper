@@ -4,12 +4,20 @@ import { onMounted, ref } from 'vue'
 import { ModernCropper } from '../packages'
 import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 
+import AmongSus from '~/assets/amongus_sus.mp3'
+
+const audioAmongSus = new Audio(AmongSus)
+
 function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
 }
 
-const srcImg = ref('https://i.imgur.com/5BYAJlz.png')
-sleep(5000).then(() => srcImg.value = 'https://i.imgur.com/ISGwgk9.png')
+const imgSrc = ref('https://i.imgur.com/5BYAJlz.png')
+sleep(5000).then(async () => {
+  audioAmongSus.play()
+  await sleep(100)
+  imgSrc.value = 'https://i.imgur.com/ISGwgk9.png'
+})
 const cropper = ref<InstanceType<typeof ModernCropper>>()
 
 onMounted(async () => {
@@ -54,9 +62,16 @@ onMounted(() => {
 ...
 <ModernCropper
   ref="cropper"
+  class="w-80 h-40"
   :src="imgSrc"
->
-</ModernCropper>
+  :pass-through="{
+    cropper: { constructOptions: undefined },
+    image: { attributes: { class: 'blur' } },
+    canvas: { attributes: { background: false } },
+    selection: { attributes: undefined },
+    selections: { attributes: undefined },
+  }"
+/>
 ...
 `
 </script>
@@ -124,7 +139,20 @@ onMounted(() => {
 
       <div class="my-2 text-primary">
         Check out cropperjs@next document: <a href="https://fengyuanchen.github.io/cropperjs/v2/api/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/v2/api/</a>
-        <ModernCropper ref="cropper" :src="srcImg" class="h-40" />
+        <div class="flex items-center justify-center">
+          <ModernCropper
+            ref="cropper"
+            class="w-80 h-40"
+            :src="imgSrc"
+            :pass-through="{
+              cropper: { constructOptions: undefined },
+              image: { attributes: { class: 'blur' } },
+              canvas: { attributes: { background: false } },
+              selection: { attributes: undefined },
+              selections: { attributes: undefined },
+            }"
+          />
+        </div>
       </div>
 
       <footer class="mt-16 w-full flex-center text-primary" text="slate-900 dark:slate-300 opacity-60 sm">
