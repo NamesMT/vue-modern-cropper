@@ -1,3 +1,27 @@
+## v0.2.3
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.2...v0.2.3)
+
+### 🚀 Enhancements
+
+- Call reset on initial attribute set ([063ba01](https://github.com/NamesMT/vue-modern-cropper/commit/063ba01))
+
+### 🩹 Fixes
+
+- Transform camelCase to kebab-case ([df0cafd](https://github.com/NamesMT/vue-modern-cropper/commit/df0cafd))
+
+### 📦 Build
+
+- Fix inconsistent tsconfig for build and dev ([95bd1c9](https://github.com/NamesMT/vue-modern-cropper/commit/95bd1c9))
+
+### 🏡 Chore
+
+- Relaxes `cropperjs` version selector ([ba2962b](https://github.com/NamesMT/vue-modern-cropper/commit/ba2962b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.2
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.1...v0.2.2)
