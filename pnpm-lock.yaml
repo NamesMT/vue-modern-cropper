@@ -18,6 +18,9 @@ devDependencies:
   '@iconify-json/mdi':
     specifier: ^1.1.65
     version: 1.1.65
+  '@types/clean-css':
+    specifier: ^4.2.11
+    version: 4.2.11
   '@types/node':
     specifier: ^18.19.30
     version: 18.19.30
@@ -1215,6 +1218,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: true
+
+  /@types/clean-css@4.2.11:
+    resolution: {integrity: sha512-Y8n81lQVTAfP2TOdtJJEsCoYl1AnOkqDqMvXb9/7pfgZZ7r8YrEyurrAvAoAjHOGXKRybay+5CsExqIH6liccw==}
+    dependencies:
+      '@types/node': 18.19.30
+      source-map: 0.6.1
     dev: true
 
   /@types/eslint@8.56.7:

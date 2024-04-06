@@ -54,7 +54,6 @@ export default defineConfig(({ command: _command, mode }) => {
           {
             format: 'es',
             entryFileNames: `vue-modern-cropper.mjs`,
-            preserveModules: false,
           },
         ],
       },

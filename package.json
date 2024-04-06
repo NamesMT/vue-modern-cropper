@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "vite --mode docs",
     "build:docs": "vite build --mode docs",
-    "build:lib": "vite build --mode lib && vue-tsc",
+    "build:lib": "vite build --mode lib && vue-tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
     "prerelease": "pnpm run build:lib"
@@ -33,6 +33,7 @@
     "@antfu/eslint-config": "^2.12.2",
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/mdi": "^1.1.65",
+    "@types/clean-css": "^4.2.11",
     "@types/node": "^18.19.30",
     "@unocss/eslint-plugin": "^0.59.0",
     "@unocss/reset": "^0.59.0",
