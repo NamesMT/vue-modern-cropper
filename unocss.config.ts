@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, presetAttributify } from 'unocss'
+import { defineConfig, presetAttributify, presetUno } from 'unocss'
 
 export default defineConfig({
   presets: [presetUno(), presetAttributify()],
@@ -8,7 +8,7 @@ export default defineConfig({
       'flex-between': 'flex justify-between items-center',
       'text-primary': 'text-neutral-900 dark:text-neutral-50',
       'text-neon':
-        'text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-700 dark:to-emerald-300 '
-    }
-  ]
+        'text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-700 dark:to-emerald-300 ',
+    },
+  ],
 })

@@ -37,6 +37,7 @@ Feel free to submit PRs to add helper functions.
 pnpm add vue-modern-cropper
 ```
 
+<!-- eslint-skip -->
 ```ts
 // Register it globally
 import { ModernCropper } from 'vue-modern-cropper'

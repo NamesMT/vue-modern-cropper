@@ -1,7 +1,8 @@
+<!-- eslint-disable no-console -->
 <script lang="ts" setup>
-import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
+import { onMounted, ref } from 'vue'
 import { ModernCropper } from '../packages'
-import { onMounted, ref } from 'vue';
+import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 
 function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
@@ -15,11 +16,11 @@ onMounted(async () => {
   console.log('Hi!', 'mount state:', cropper.value?.cropperMounted)
   console.log('Will log again in 1 sec...')
   await sleep(1000)
-  
+
   if (cropper.value?.cropperMounted) {
     console.log({
       cropperRef: cropper.value,
-      selection: cropper.value.selection
+      selection: cropper.value.selection,
     })
   }
 })
@@ -70,8 +71,8 @@ onMounted(() => {
         </div>
         <div class="flex-center gap-4">
           <button class="!bg-transparent opacity-50 hover:opacity-100 transition" @click="(e) => toggleDarkmode()">
-            <carbon:moon class="w-6 h-6" v-if="isDark" />
-            <carbon:sun class="w-6 h-6" v-else />
+            <carbon:moon v-if="isDark" class="w-6 h-6" />
+            <carbon:sun v-else class="w-6 h-6" />
           </button>
           <a class="opacity-50 hover:opacity-100 transition" href="https://github.com/NamesMT/vue-modern-cropper">
             <carbon:logo-github class="h-6 w-6" />
@@ -81,17 +82,23 @@ onMounted(() => {
       <header class="py-20">
         <div class="font-extrabold">
           <span class="text-6xl text-neon">Looking for a modern cropper?</span>
-          <div class="text-6xl text-primary flex gap-2"><Logo class="w-15 h-15" />Vue Modern Cropper</div>
+          <div class="text-6xl text-primary flex gap-2">
+            <Logo class="w-15 h-15" />Vue Modern Cropper
+          </div>
         </div>
         <div class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200">
           Power-packed wrapper over cropperjs@next
         </div>
         <div class="text-xl italic font-semibold text-slate-700 py-4 dark:text-slate-200">
           <p>Why "modern cropper"?</p>
-          <p>It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
-            easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span></p>
+          <p>
+            It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
+            easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span>
+          </p>
           <p>So I created this.</p>
-          <p class="text-base">btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-#00DC82 text-xl">Nuxt</b></a></p>
+          <p class="text-base">
+            btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-#00DC82 text-xl">Nuxt</b></a>
+          </p>
         </div>
         <!-- <div class="flex gap-4 mt-8">
           <a
@@ -117,7 +124,7 @@ onMounted(() => {
 
       <div class="my-2 text-primary">
         Check out cropperjs@next document: <a href="https://fengyuanchen.github.io/cropperjs/v2/api/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/v2/api/</a>
-        <ModernCropper ref="cropper" :src="srcImg" class="h-40"/>
+        <ModernCropper ref="cropper" :src="srcImg" class="h-40" />
       </div>
 
       <footer class="mt-16 w-full flex-center text-primary" text="slate-900 dark:slate-300 opacity-60 sm">
@@ -154,7 +161,7 @@ onMounted(() => {
         </div>
       </footer>
 
-      <div class="w-full mx-auto"></div>
+      <div class="w-full mx-auto" />
     </div>
   </div>
 </template>

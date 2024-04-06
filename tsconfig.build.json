@@ -1,13 +1,13 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "declaration": true,
-    "noEmit": false,
-    "emitDeclarationOnly": true,
-    "outDir": "lib",
-    "moduleResolution": "Node",
     "target": "ESNext",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "outDir": "lib"
   },
   "vueCompilerOptions": {
     "skipTemplateCodegen": true

@@ -1,5 +1,6 @@
-import { defineConfig, UserConfig } from 'vite'
-import { resolve } from 'path'
+import { resolve } from 'node:path'
+import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import Icons from 'unplugin-icons/vite'
@@ -15,24 +16,24 @@ function minify(code: string) {
 let cssCodeStr = ''
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
-  let userConfig: UserConfig = {}
+export default defineConfig(({ command: _command, mode }) => {
+  const userConfig: UserConfig = {}
 
   const commonPlugins = [
     vue({
       script: {
-        propsDestructure: true
-      }
+        propsDestructure: true,
+      },
     }),
     UnoCSS(),
     Components({
       resolvers: [
         IconsResolver({
-          prefix: ''
-        })
-      ]
+          prefix: '',
+        }),
+      ],
     }),
-    Icons()
+    Icons(),
   ]
 
   if (mode === 'lib') {
@@ -41,7 +42,7 @@ export default defineConfig(({ command, mode }) => {
       lib: {
         entry: resolve(__dirname, 'packages/index.ts'),
         name: 'ModernCropper',
-        fileName: 'vue-modern-cropper'
+        fileName: 'vue-modern-cropper',
       },
       outDir: 'lib',
       emptyOutDir: true,
@@ -53,10 +54,10 @@ export default defineConfig(({ command, mode }) => {
           {
             format: 'es',
             entryFileNames: `vue-modern-cropper.mjs`,
-            preserveModules: false
-          }
-        ]
-      }
+            preserveModules: false,
+          },
+        ],
+      },
     }
     userConfig.plugins = [
       ...commonPlugins,
@@ -64,17 +65,19 @@ export default defineConfig(({ command, mode }) => {
         name: 'inline-css',
         transform(code, id) {
           const isCSS = (path: string) => /\.(?:css|scss|sass|postcss)$/.test(path)
-          if (!isCSS(id)) return
+          if (!isCSS(id))
+            return
 
           const cssCode = minify(code)
           cssCodeStr = cssCode
           return {
             code: '',
-            map: { mappings: '' }
+            map: { mappings: '' },
           }
         },
         renderChunk(code, { isEntry }) {
-          if (!isEntry) return
+          if (!isEntry)
+            return
 
           return {
             code: `\
@@ -88,25 +91,25 @@ export default defineConfig(({ command, mode }) => {
             }\n
             __insertCSSVueSonner(${JSON.stringify(cssCodeStr)})
             \n ${code}`,
-            map: { mappings: '' }
+            map: { mappings: '' },
           }
-        }
-      }
+        },
+      },
     ]
   }
 
   return {
     base: './',
     build: {
-      outDir: 'docs'
+      outDir: 'docs',
     },
     resolve: {
       alias: {
         '@': resolve(__dirname, '/packages'),
-        '~': resolve(__dirname, '/src')
-      }
+        '~': resolve(__dirname, '/src'),
+      },
     },
     plugins: [...commonPlugins],
-    ...userConfig
+    ...userConfig,
   }
 })
