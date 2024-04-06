@@ -1,3 +1,19 @@
+## v0.2.1
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.0...v0.2.1)
+
+### 🚀 Enhancements
+
+- Add default export ([efad7d9](https://github.com/NamesMT/vue-modern-cropper/commit/efad7d9))
+
+### 📦 Build
+
+- Fix missing declaration ([ad8c254](https://github.com/NamesMT/vue-modern-cropper/commit/ad8c254))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.0
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.1.4...v0.2.0)
