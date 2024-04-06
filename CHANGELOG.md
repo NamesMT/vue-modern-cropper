@@ -1,3 +1,32 @@
+## v0.1.4
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.1.3...v0.1.4)
+
+### 🚀 Enhancements
+
+- **docs:** Add some real logging ([6180a13](https://github.com/NamesMT/vue-modern-cropper/commit/6180a13))
+- Introduce passThrough prop ([3e123bb](https://github.com/NamesMT/vue-modern-cropper/commit/3e123bb))
+
+### 🩹 Fixes
+
+- Dev vite trying to import 'vue-modern-cropper' ([c4659bf](https://github.com/NamesMT/vue-modern-cropper/commit/c4659bf))
+- Reactivity lost on direct access to cropperKeys ([284364a](https://github.com/NamesMT/vue-modern-cropper/commit/284364a))
+
+### 📖 Documentation
+
+- Update docs :D ([53b92aa](https://github.com/NamesMT/vue-modern-cropper/commit/53b92aa))
+- Update to latest status :) ([7c4d2a2](https://github.com/NamesMT/vue-modern-cropper/commit/7c4d2a2))
+- Update assets ([e3514b0](https://github.com/NamesMT/vue-modern-cropper/commit/e3514b0))
+
+### 🏡 Chore
+
+- Setup `@antfu/eslint-config` ([fcb66de](https://github.com/NamesMT/vue-modern-cropper/commit/fcb66de))
+- Update toolchain deps major ([e893937](https://github.com/NamesMT/vue-modern-cropper/commit/e893937))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.1.3
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.1.2...v0.1.3)

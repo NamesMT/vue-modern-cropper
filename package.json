@@ -1,7 +1,7 @@
 {
   "name": "vue-modern-cropper",
   "type": "module",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Power-packed wrapper over cropperjs@next",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "homepage": "https://github.com/NamesMT/vue-modern-cropper",
