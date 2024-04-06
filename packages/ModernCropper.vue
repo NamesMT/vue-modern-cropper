@@ -168,7 +168,7 @@ defineExpose(reactive({
 </script>
 
 <template>
-  <div class="modernCropperWrapper">
+  <div class="modern-cropper__wrapper">
     <img v-bind="{ id, src, crossorigin }">
   </div>
 </template>
