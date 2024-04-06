@@ -98,7 +98,8 @@ onMounted(() => {
         <div class="font-extrabold">
           <span class="text-6xl text-neon">Looking for a modern cropper?</span>
           <div class="text-6xl text-primary flex gap-2">
-            <Logo class="w-15 h-15" />Vue Modern Cropper
+            <Logo class="w-15 h-15" />
+            <span class="text-#327959">Vue</span>Modern Cropper
           </div>
         </div>
         <div class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200">
