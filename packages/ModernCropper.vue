@@ -104,15 +104,26 @@ onCropperMounted(({ image }) => {
 })
 
 function setElementAttributes(element: HTMLElement, attributes: Record<any, any>) {
+  let doReset = false
+
   Object.entries(attributes).forEach(([attribute, value]) => {
     if (value === undefined)
       return
+
+    if (attribute.includes('initial'))
+      doReset = true
 
     if (value === false || value === null)
       return element.removeAttribute(attribute)
 
     element.setAttribute(attribute.replaceAll(/([a-z])([A-Z])/g, (_match, p1: string, p2: string) => `${p1}-${p2.toLowerCase()}`), value)
   })
+
+  if (doReset) {
+    console.warn(`[ModernCropper]: "initial"-type attribute detected, will call $reset(), but the selection may disappear due to https://github.com/fengyuanchen/cropperjs/issues/1157`)
+    // @ts-expect-error $reset don't exist on HTMLElement
+    element.$reset()
+  }
 }
 // process passThrough options
 onCropperMounted(({ image, canvas, selection, selections }) => {
