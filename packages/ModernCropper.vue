@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Cropper from 'cropperjs'
-import { nextTick, onMounted, reactive, ref, watch } from 'vue'
+import { nextTick, onMounted, reactive, ref, toRefs, watch } from 'vue'
 import type { SetNonNullable } from 'type-fest'
 
 const {
@@ -77,7 +77,7 @@ type DiscriminatedExpose = { onCropperMounted: typeof onCropperMounted }
   )
 
 defineExpose(reactive({
-  ...cropperKeys,
+  ...toRefs(cropperKeys),
 
   cropperMounted,
   onCropperMounted,
