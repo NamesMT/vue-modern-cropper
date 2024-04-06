@@ -111,7 +111,7 @@ function setElementAttributes(element: HTMLElement, attributes: Record<any, any>
     if (value === false || value === null)
       return element.removeAttribute(attribute)
 
-    element.setAttribute(attribute, value)
+    element.setAttribute(attribute.replaceAll(/([a-z])([A-Z])/g, (_match, p1: string, p2: string) => `${p1}-${p2.toLowerCase()}`), value)
   })
 }
 // process passThrough options
