@@ -1,3 +1,26 @@
+## v0.2.2
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.1...v0.2.2)
+
+### 🩹 Fixes
+
+- Wrong class name used ([6835642](https://github.com/NamesMT/vue-modern-cropper/commit/6835642))
+
+### 📖 Documentation
+
+- Make the title color consistent ([e2bf18c](https://github.com/NamesMT/vue-modern-cropper/commit/e2bf18c))
+
+### 🏡 Chore
+
+- Docs build deploy workflow ([e0e228d](https://github.com/NamesMT/vue-modern-cropper/commit/e0e228d))
+- Delete old static workflow ([0bd9bce](https://github.com/NamesMT/vue-modern-cropper/commit/0bd9bce))
+- Remove `docs` directory ([f3668a2](https://github.com/NamesMT/vue-modern-cropper/commit/f3668a2))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+- Trung Dang ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.1
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.0...v0.2.1)
