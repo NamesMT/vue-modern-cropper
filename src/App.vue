@@ -16,14 +16,15 @@ onMounted(() => {
     cropper.value.cropper
 })
 
+const importSnippet = `import { ModernCropper } from 'vue-modern-cropper'`
 const demoCode0 = `
 // Register it globally
-import { ModernCropper } from 'vue-modern-cropper'
+${importSnippet}
 Vue.component(ModernCropper)
 
 /* SomeComponent.vue */
 // Or you could import it locally
-import { ModernCropper } from 'vue-modern-cropper'
+${importSnippet}
 
 // Use InstanceType to infer the exposed props
 const cropper = ref<InstanceType<typeof ModernCropper>>()
