@@ -1,3 +1,19 @@
+## v0.2.0
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.1.4...v0.2.0)
+
+### 🎨 Styles
+
+- ⚠️  Change css naming convention ([f977e8b](https://github.com/NamesMT/vue-modern-cropper/commit/f977e8b))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Change css naming convention ([f977e8b](https://github.com/NamesMT/vue-modern-cropper/commit/f977e8b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.1.4
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.1.3...v0.1.4)
