@@ -174,7 +174,7 @@ defineExpose(reactive({
 </template>
 
 <style lang="scss">
-.modernCropperWrapper {
+.modern-cropper__wrapper {
   cropper-canvas {
     width: 100%;
     height: 100%;
