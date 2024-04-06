@@ -11,9 +11,17 @@ const srcImg = ref('https://i.imgur.com/5BYAJlz.png')
 sleep(5000).then(() => srcImg.value = 'https://i.imgur.com/ISGwgk9.png')
 const cropper = ref<InstanceType<typeof ModernCropper>>()
 
-onMounted(() => {
-  if (cropper.value?.cropperMounted)
-    cropper.value.cropper
+onMounted(async () => {
+  console.log('Hi!', 'mount state:', cropper.value?.cropperMounted)
+  console.log('Will log again in 1 sec...')
+  await sleep(1000)
+  
+  if (cropper.value?.cropperMounted) {
+    console.log({
+      cropperRef: cropper.value,
+      selection: cropper.value.selection
+    })
+  }
 })
 
 const importSnippet = `import { ModernCropper } from 'vue-modern-cropper'`
@@ -109,7 +117,7 @@ onMounted(() => {
 
       <div class="my-2 text-primary">
         Check out cropperjs@next document: <a href="https://fengyuanchen.github.io/cropperjs/v2/api/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/v2/api/</a>
-        <ModernCropper :src="srcImg" class="h-40"/>
+        <ModernCropper ref="cropper" :src="srcImg" class="h-40"/>
       </div>
 
       <footer class="mt-16 w-full flex-center text-primary" text="slate-900 dark:slate-300 opacity-60 sm">
