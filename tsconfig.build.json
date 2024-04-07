@@ -3,7 +3,6 @@
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
     "baseUrl": "./",
-    "moduleResolution": "Bundler",
     "declaration": true,
     "emitDeclarationOnly": true,
     "noEmit": false,
