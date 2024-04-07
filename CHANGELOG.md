@@ -1,3 +1,20 @@
+## v0.2.5
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.3...v0.2.5)
+
+### 📦 Build
+
+- Fix vue-tsc@2 d.ts incompatible error on client ([89e9a8f](https://github.com/NamesMT/vue-modern-cropper/commit/89e9a8f))
+
+### 🏡 Chore
+
+- Update LICENSE format ([1201572](https://github.com/NamesMT/vue-modern-cropper/commit/1201572))
+- Minor remove unnecessary line ([e19352c](https://github.com/NamesMT/vue-modern-cropper/commit/e19352c))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.3
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.2...v0.2.3)
