@@ -7,6 +7,7 @@ import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 import AmongSus from '~/assets/amongus_sus.mp3'
 
 const audioAmongSus = new Audio(AmongSus)
+audioAmongSus.volume = 0.2
 
 function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
