@@ -31,8 +31,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.12.2",
-    "@iconify-json/carbon": "^1.1.31",
-    "@iconify-json/mdi": "^1.1.65",
+    "@iconify-json/tabler": "^1.1.110",
     "@types/clean-css": "^4.2.11",
     "@types/node": "^18.19.30",
     "@unocss/eslint-plugin": "^0.59.0",

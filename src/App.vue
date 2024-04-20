@@ -87,11 +87,11 @@ onMounted(() => {
         </div>
         <div class="flex-center gap-4">
           <button class="!bg-transparent opacity-50 hover:opacity-100 transition" @click="(e) => toggleDarkmode()">
-            <carbon:moon v-if="isDark" class="w-6 h-6" />
-            <carbon:sun v-else class="w-6 h-6" />
+            <tabler:moon v-if="isDark" class="w-6 h-6" />
+            <tabler:sun v-else class="w-6 h-6" />
           </button>
           <a class="opacity-50 hover:opacity-100 transition" href="https://github.com/NamesMT/vue-modern-cropper">
-            <carbon:logo-github class="h-6 w-6" />
+            <tabler:brand-github class="h-6 w-6" />
           </a>
         </div>
       </nav>
@@ -157,33 +157,31 @@ onMounted(() => {
         </div>
       </div>
 
-      <footer class="mt-16 w-full flex-center text-primary" text="slate-900 dark:slate-300 opacity-60 sm">
-        <div class="copyright flex flex-col justify-center items-center">
+      <footer class="mt-16 w-full [&_a]:(text-primary-600 dark:text-primary-300)" text="slate-900 dark:slate-300 opacity-60 sm">
+        <div class="mb-2 flex justify-center">
+          <ThemeToggle />
+        </div>
+
+        <div class="copyright flex flex-col items-center justify-center">
           <p>
             Code with ❤ & ☕️ by
-            <a class="text-neon" href="https://github.com/NamesMT">
+            <a href="https://github.com/NamesMT">
               @NamesMT
             </a>
             <span> © {{ new Date().getFullYear() }}</span>
           </p>
+
           <p class="flex items-center space-x-1">
-            <carbon:logo-twitter class="text-emerald-500" />
+            <tabler:brand-twitter-filled class="text-primary-400" />
             <span>
-              <a href="https://twitter.com/NamesMT" class="text-neon" target="_blank">
+              <a href="https://twitter.com/topnames_MT" target="_blank">
                 Follow me on Twitter
               </a>
             </span>
-            <span class="px-2 text-emerald-300">|</span>
-            <carbon:cafe class="text-emerald-500" />
+            <span class="px-2 text-primary-300">|</span>
+            <tabler:brand-github-filled class="text-primary-400" />
             <span>
-              <a href="https://www.buymeacoffee.com/xlbd" target="_blank" class="text-neon">
-                Buy me a coffee
-              </a>
-            </span>
-            <span class="px-2 text-emerald-300">|</span>
-            <mdi:heart class="text-emerald-500" />
-            <span>
-              <a href="https://github.com/sponsors/NamesMT" target="_blank" class="text-neon">
+              <a href="https://github.com/sponsors/NamesMT" target="_blank">
                 Sponsor me on GitHub
               </a>
             </span>
