@@ -180,7 +180,7 @@ defineExpose(reactive({
 
 <template>
   <div class="modern-cropper__wrapper">
-    <img v-bind="{ id, src, crossorigin }">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" v-bind="{ id, crossorigin }">
   </div>
 </template>
 
