@@ -4,7 +4,7 @@
     "lib": ["ESNext", "DOM"],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["./packages/*"]
+      "~/*": ["./lib/*"]
     },
     "declaration": true,
     "emitDeclarationOnly": true,
@@ -15,9 +15,9 @@
     "skipTemplateCodegen": true
   },
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.d.ts",
-    "packages/**/*.tsx",
-    "packages/**/*.vue"
+    "lib/**/*.ts",
+    "lib/**/*.d.ts",
+    "lib/**/*.tsx",
+    "lib/**/*.vue"
   ]
 }

@@ -12,20 +12,21 @@
   },
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/vue-modern-cropper.mjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-modern-cropper.mjs"
     }
   },
-  "main": "./lib/vue-modern-cropper.mjs",
-  "module": "./lib/vue-modern-cropper.mjs",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/vue-modern-cropper.mjs",
+  "module": "./dist/vue-modern-cropper.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "dev": "vite --mode docs",
     "build:docs": "vite build --mode docs",
     "build:lib": "vite build --mode lib && vue-tsc -p tsconfig.build.json",
+    "build": "pnpm run build:lib",
     "preview": "vite preview",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
     "prerelease": "pnpm run build:lib"
