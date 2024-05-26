@@ -3,7 +3,7 @@ import App from './App.vue'
 
 import 'uno.css'
 import '@unocss/reset/tailwind-compat.css'
-import highlight from '~/plugins/highlight'
+import highlight from '@/plugins/highlight'
 
 const app = createApp(App)
 

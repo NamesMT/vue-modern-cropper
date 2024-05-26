@@ -3,6 +3,9 @@
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
     "baseUrl": "./",
+    "paths": {
+      "~/*": ["./packages/*"]
+    },
     "declaration": true,
     "emitDeclarationOnly": true,
     "noEmit": false,

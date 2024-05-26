@@ -1,10 +1,10 @@
 <!-- eslint-disable no-console -->
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
-import { ModernCropper } from '../packages'
-import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
+import { ModernCropper } from '~/index'
+import { isDark, toggleDarkmode } from '@/composables/useDarkmode'
 
-import AmongSus from '~/assets/amongus_sus.mp3'
+import AmongSus from '@/assets/amongus_sus.mp3'
 
 const audioAmongSus = new Audio(AmongSus)
 audioAmongSus.volume = 0.2
@@ -195,5 +195,5 @@ onMounted(async () => {
 </template>
 
 <style lang="scss">
-@import '~/assets/highlight.scss';
+@import '@/assets/highlight.scss';
 </style>

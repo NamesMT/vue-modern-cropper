@@ -98,14 +98,14 @@ export default defineConfig(({ command: _command, mode }) => {
   }
 
   return {
-    base: './',
+    root: './docs',
     build: {
-      outDir: 'docs',
+      outDir: resolve(__dirname, './dist-docs'),
     },
     resolve: {
       alias: {
-        '@': resolve(__dirname, '/packages'),
-        '~': resolve(__dirname, '/src'),
+        '@': resolve(__dirname, './docs'),
+        '~': resolve(__dirname, './packages'),
       },
     },
     plugins: [...commonPlugins],

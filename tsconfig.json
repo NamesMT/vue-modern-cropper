@@ -4,18 +4,18 @@
     "lib": ["ESNext", "DOM"],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["packages/*"],
-      "~/*": ["./src/*"]
+      "~/*": ["./packages/*"],
+      "@/*": ["./docs/*"]
     },
     "sourceMap": true
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": [
     "vite.config.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "docs/**/*.ts",
+    "docs/**/*.d.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue",
     "packages/**/*.ts",
     "packages/**/*.d.ts",
     "packages/**/*.tsx",
