@@ -21,6 +21,7 @@
 
 - [Vue Modern Cropper](#vue-modern-cropper)
   - [Table of Contents](#table-of-contents)
+  - [NOTE!!](#note)
   - [Usage](#usage)
   - [License](#license)
 
@@ -50,7 +51,7 @@ import { ModernCropper } from 'vue-modern-cropper'
 // Use InstanceType to infer the exposed props
 const cropper = ref<InstanceType<typeof ModernCropper>>()
 
-onMounted(() => {
+onMounted(async () => {
   // remember to await nextTick if you use Nuxt (Nuxt client component caveat)
   await nextTick()
 

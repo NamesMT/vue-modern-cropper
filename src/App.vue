@@ -47,7 +47,7 @@ ${importSnippet}
 // Use InstanceType to infer the exposed props
 const cropper = ref<InstanceType<typeof ModernCropper>>()
 
-onMounted(() => {
+onMounted(async () => {
   // remember to await nextTick if you use Nuxt (Nuxt client component caveat)
   await nextTick()
 
@@ -78,19 +78,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900">
-    <div class="container mx-auto max-w-5xl relative">
-      <nav class="h-20 py-4 flex-between text-primary">
-        <div class="font-semibold text-xl flex-center gap-2">
+  <div class="h-full min-h-screen w-full bg-neutral-50 dark:bg-neutral-900">
+    <div class="relative mx-auto max-w-5xl container">
+      <nav class="h-20 flex-between py-4 text-primary">
+        <div class="flex-center gap-2 text-xl font-semibold">
           <Logo class="h-6 w-6" />
           <span class="text-#327959">Vue</span>Modern Cropper
         </div>
         <div class="flex-center gap-4">
-          <button class="!bg-transparent opacity-50 hover:opacity-100 transition" @click="(e) => toggleDarkmode()">
-            <tabler:moon v-if="isDark" class="w-6 h-6" />
-            <tabler:sun v-else class="w-6 h-6" />
+          <button class="opacity-50 transition !bg-transparent hover:opacity-100" @click="(e) => toggleDarkmode()">
+            <tabler:moon v-if="isDark" class="h-6 w-6" />
+            <tabler:sun v-else class="h-6 w-6" />
           </button>
-          <a class="opacity-50 hover:opacity-100 transition" href="https://github.com/NamesMT/vue-modern-cropper">
+          <a class="opacity-50 transition hover:opacity-100" href="https://github.com/NamesMT/vue-modern-cropper">
             <tabler:brand-github class="h-6 w-6" />
           </a>
         </div>
@@ -98,15 +98,15 @@ onMounted(() => {
       <header class="py-20">
         <div class="font-extrabold">
           <span class="text-6xl text-neon">Looking for a modern cropper?</span>
-          <div class="text-6xl text-primary flex gap-2">
-            <Logo class="w-15 h-15" />
+          <div class="flex gap-2 text-6xl text-primary">
+            <Logo class="h-15 w-15" />
             <span class="text-#327959">Vue</span>Modern Cropper
           </div>
         </div>
-        <div class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200">
+        <div class="py-4 text-2xl text-slate-700 font-semibold dark:text-slate-200">
           Power-packed wrapper over cropperjs@next
         </div>
-        <div class="text-xl italic font-semibold text-slate-700 py-4 dark:text-slate-200">
+        <div class="py-4 text-xl text-slate-700 font-semibold italic dark:text-slate-200">
           <p>Why "modern cropper"?</p>
           <p>
             It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
@@ -114,7 +114,7 @@ onMounted(() => {
           </p>
           <p>So I created this.</p>
           <p class="text-base">
-            btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-#00DC82 text-xl">Nuxt</b></a>
+            btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-xl text-#00DC82">Nuxt</b></a>
           </p>
         </div>
         <!-- <div class="flex gap-4 mt-8">
@@ -144,7 +144,7 @@ onMounted(() => {
         <div class="flex items-center justify-center">
           <ModernCropper
             ref="cropper"
-            class="w-80 h-40"
+            class="h-40 w-80"
             :src="imgSrc"
             :pass-through="{
               cropper: { constructOptions: undefined },
@@ -157,7 +157,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <footer class="mt-16 w-full [&_a]:(text-primary-600 dark:text-primary-300)" text="slate-900 dark:slate-300 opacity-60 sm">
+      <footer class="[&_a]:text-primary-600 [&_a]:dark:text-primary-300 mt-16 w-full" text="slate-900 dark:slate-300 opacity-60 sm">
         <div class="mb-2 flex justify-center">
           <ThemeToggle />
         </div>
@@ -178,7 +178,7 @@ onMounted(() => {
                 Follow me on Twitter
               </a>
             </span>
-            <span class="px-2 text-primary-300">|</span>
+            <span class="text-primary-300 px-2">|</span>
             <tabler:brand-github-filled class="text-primary-400" />
             <span>
               <a href="https://github.com/sponsors/NamesMT" target="_blank">
@@ -189,7 +189,7 @@ onMounted(() => {
         </div>
       </footer>
 
-      <div class="w-full mx-auto" />
+      <div class="mx-auto w-full" />
     </div>
   </div>
 </template>
