@@ -36,11 +36,19 @@ const {
   src = '',
   crossorigin = 'anonymous',
 
+  resetOnInitialAttributes = true,
+
   passThrough,
 } = defineProps<{
   id?: string
   src?: string
   crossorigin?: 'anonymous' | 'use-credentials'
+
+  /**
+   * Automatically call $reset() on initial attributes changes
+   * @default true
+   */
+  resetOnInitialAttributes?: boolean
 
   passThrough?: PassThroughOptions
 }>()
@@ -110,7 +118,7 @@ function setElementAttributes(element: HTMLElement, attributes: Record<any, any>
     if (value === undefined)
       return
 
-    if (attribute.includes('initial'))
+    if (attribute.includes('initial') && resetOnInitialAttributes)
       doReset = true
 
     if (value === false || value === null)
