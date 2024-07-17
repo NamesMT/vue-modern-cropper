@@ -1,3 +1,39 @@
+## v0.2.6
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.5...v0.2.6)
+
+### 🚀 Enhancements
+
+- Lower the unexpected audio volume, sorry... ([7c43c2f](https://github.com/NamesMT/vue-modern-cropper/commit/7c43c2f))
+- Add `resetOnInitialAttributes` prop ([cc7171e](https://github.com/NamesMT/vue-modern-cropper/commit/cc7171e))
+
+### 🩹 Fixes
+
+- Defer the `src` assign to onCropperMounted hook to ensure consistency ([425a8ce](https://github.com/NamesMT/vue-modern-cropper/commit/425a8ce))
+- **tsconfig:** Correct `outDir` ([988374f](https://github.com/NamesMT/vue-modern-cropper/commit/988374f))
+
+### 💅 Refactors
+
+- Src => docs ([4a1c025](https://github.com/NamesMT/vue-modern-cropper/commit/4a1c025))
+- Packages => lib ([0aab288](https://github.com/NamesMT/vue-modern-cropper/commit/0aab288))
+
+### 📖 Documentation
+
+- Update footer & icons usage ([f1c766d](https://github.com/NamesMT/vue-modern-cropper/commit/f1c766d))
+- Fix `async` missing ([7cde1db](https://github.com/NamesMT/vue-modern-cropper/commit/7cde1db))
+
+### 🏡 Chore
+
+- Update deps, set packageManager ([5078948](https://github.com/NamesMT/vue-modern-cropper/commit/5078948))
+- Update deps ([555d172](https://github.com/NamesMT/vue-modern-cropper/commit/555d172))
+- Remove `.prettierrc` ([68fc4e8](https://github.com/NamesMT/vue-modern-cropper/commit/68fc4e8))
+- Update deps ([8c8de34](https://github.com/NamesMT/vue-modern-cropper/commit/8c8de34))
+
+### ❤️ Contributors
+
+- Trung <trung.dangquoc@gameloft.com>
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.5
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.3...v0.2.5)
