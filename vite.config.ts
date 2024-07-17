@@ -44,7 +44,7 @@ export default defineConfig(({ command: _command, mode }) => {
         name: 'ModernCropper',
         fileName: 'vue-modern-cropper',
       },
-      outDir: 'dist',
+      outDir: resolve(__dirname, './dist'),
       emptyOutDir: true,
       cssCodeSplit: false,
       sourcemap: true,
