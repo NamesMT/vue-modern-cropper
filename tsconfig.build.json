@@ -9,7 +9,7 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "outDir": "lib"
+    "outDir": "dist"
   },
   "vueCompilerOptions": {
     "skipTemplateCodegen": true
