@@ -1,3 +1,15 @@
+## v0.2.7
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.6...v0.2.7)
+
+### 🩹 Fixes
+
+- Bad outDir ([3573f73](https://github.com/NamesMT/vue-modern-cropper/commit/3573f73))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.6
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.5...v0.2.6)
