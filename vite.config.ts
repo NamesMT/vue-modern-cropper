@@ -27,6 +27,7 @@ export default defineConfig(({ command: _command, mode }) => {
     }),
     UnoCSS(),
     Components({
+      dirs: 'components',
       resolvers: [
         IconsResolver({
           prefix: '',
