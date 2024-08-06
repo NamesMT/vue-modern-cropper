@@ -1,3 +1,23 @@
+## v0.2.10
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.9...v0.2.10)
+
+### 💅 Refactors
+
+- Remove unnecessary nextTick ([8537ebb](https://github.com/NamesMT/vue-modern-cropper/commit/8537ebb))
+
+### 📖 Documentation
+
+- **README:** Note for client-only render ([eb3d187](https://github.com/NamesMT/vue-modern-cropper/commit/eb3d187))
+
+### 🏡 Chore
+
+- No longer referrence @`next` tag ([06e622c](https://github.com/NamesMT/vue-modern-cropper/commit/06e622c))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.9
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.8...v0.2.9)
