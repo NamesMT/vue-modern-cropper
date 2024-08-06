@@ -32,6 +32,8 @@
 ## NOTE!!
 `vue-modern-cropper` uses `cropperjs@next` (v2), which is not yet stable release, you can check it's documentation [HERE](https://fengyuanchen.github.io/cropperjs/v2/api/)
 
+As it current state, `cropperjs` is not SSR-friendly, though even if it's SSR-able, I think it would be better to render it client-only to avoid overhead on the server, so remember it wrap/mark the component as `ClientOnly` if your project have SSR-enabled.
+
 Feel free to submit PRs to add helper functions.
 
 ## Usage
