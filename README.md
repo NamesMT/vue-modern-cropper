@@ -34,13 +34,12 @@
 
 As it current state, `cropperjs` is not SSR-friendly, though even if it's SSR-able, I think it would be better to render it client-only to avoid overhead on the server, so remember it wrap/mark the component as `ClientOnly` if your project have SSR-enabled.
 
-Feel free to submit PRs to add helper functions.
+Feel free to submit PRs to add helper functions 😘.
 
 ## Usage
 ### Install
-Because cropperjs is not stable and we're referrencing it at @`next` tag, it cannot be automatically installed by package managers and we need to install it manually.
 ```sh
-pnpm add vue-modern-cropper cropperjs@next
+pnpm add vue-modern-cropper
 ```
 
 ### Use

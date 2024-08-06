@@ -32,7 +32,7 @@
     "prerelease": "pnpm run build:lib"
   },
   "peerDependencies": {
-    "cropperjs": "next"
+    "cropperjs": "2.0.0-rc.1"
   },
   "peerDependenciesMeta": {
     "cropperjs": {
