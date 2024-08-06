@@ -23,6 +23,8 @@
   - [Table of Contents](#table-of-contents)
   - [NOTE!!](#note)
   - [Usage](#usage)
+    - [Install](#install)
+    - [Use](#use)
   - [License](#license)
 
 </details>
@@ -33,11 +35,13 @@
 Feel free to submit PRs to add helper functions.
 
 ## Usage
+### Install
+Because cropperjs is not stable and we're referrencing it at @`next` tag, it cannot be automatically installed by package managers and we need to install it manually.
 ```sh
-# Install it
-pnpm add vue-modern-cropper
+pnpm add vue-modern-cropper cropperjs@next
 ```
 
+### Use
 <!-- eslint-skip -->
 ```ts
 // Register it globally
