@@ -1,3 +1,15 @@
+## v0.2.9
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.8...v0.2.9)
+
+### 📖 Documentation
+
+- **README:** Note for manually installing `cropperjs` ([d6e863e](https://github.com/NamesMT/vue-modern-cropper/commit/d6e863e))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.8
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.7...v0.2.8)
