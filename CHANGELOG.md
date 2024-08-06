@@ -1,3 +1,20 @@
+## v0.2.8
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.7...v0.2.8)
+
+### 🩹 Fixes
+
+- **docs:** Components auto import dir ([a11c746](https://github.com/NamesMT/vue-modern-cropper/commit/a11c746))
+
+### 🏡 Chore
+
+- Update deps ([a23525c](https://github.com/NamesMT/vue-modern-cropper/commit/a23525c))
+- Mark `cropperjs` as peerDep and should not bundle ([4447dc0](https://github.com/NamesMT/vue-modern-cropper/commit/4447dc0))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.2.7
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.6...v0.2.7)
