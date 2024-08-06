@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CropperOptions } from 'cropperjs'
 import Cropper from 'cropperjs'
-import { onMounted, reactive, ref, toRefs, watch } from 'vue'
+import { nextTick, onMounted, reactive, ref, toRefs, watch } from 'vue'
 import type { SetNonNullable } from 'type-fest'
 
 export interface PassThroughOptions {
@@ -86,7 +86,9 @@ function onCropperMounted(hook: CropperHook) {
     hooksList.push(hook)
 }
 
-onMounted(() => {
+onMounted(async () => {
+  await nextTick()
+
   cropper.value = new Cropper(document.getElementById(id) as HTMLImageElement, passThrough?.cropper?.constructOptions)
   image.value = cropper.value.getCropperImage()
   canvas.value = cropper.value.getCropperCanvas()
