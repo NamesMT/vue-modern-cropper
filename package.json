@@ -31,6 +31,14 @@
     "release": "pnpm dlx changelogen@latest --release --push --publish",
     "prerelease": "pnpm run build:lib"
   },
+  "peerDependencies": {
+    "cropperjs": "next"
+  },
+  "peerDependenciesMeta": {
+    "cropperjs": {
+      "optional": false
+    }
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
     "@iconify-json/tabler": "^1.1.119",
@@ -42,7 +50,6 @@
     "@vue/tsconfig": "^0.5.1",
     "@vueuse/core": "^10.11.0",
     "clean-css": "^5.3.3",
-    "cropperjs": "next",
     "eslint": "^9.8.0",
     "highlight.js": "^11.10.0",
     "sass": "^1.77.8",

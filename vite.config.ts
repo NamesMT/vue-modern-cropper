@@ -50,7 +50,7 @@ export default defineConfig(({ command: _command, mode }) => {
       cssCodeSplit: false,
       sourcemap: true,
       rollupOptions: {
-        external: ['vue'],
+        external: ['vue', 'cropperjs'],
         output: [
           {
             format: 'es',

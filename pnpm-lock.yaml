@@ -12,6 +12,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      cropperjs:
+        specifier: next
+        version: 2.0.0-rc.1
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.24.1
@@ -43,9 +47,6 @@ importers:
       clean-css:
         specifier: ^5.3.3
         version: 5.3.3
-      cropperjs:
-        specifier: next
-        version: 2.0.0-rc.1
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
