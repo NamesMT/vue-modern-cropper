@@ -1,3 +1,15 @@
+## v1.0.0
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.12...v1.0.0)
+
+### 🏡 Chore
+
+- Housekeeping ([f88430e](https://github.com/NamesMT/vue-modern-cropper/commit/f88430e))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v0.2.12
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.11...v0.2.12)
