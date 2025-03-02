@@ -195,5 +195,5 @@ onMounted(async () => {
 </template>
 
 <style lang="scss">
-@import '@/assets/highlight.scss';
+@use '@/assets/highlight.scss';
 </style>

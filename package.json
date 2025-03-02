@@ -2,7 +2,7 @@
   "name": "vue-modern-cropper",
   "type": "module",
   "version": "0.2.12",
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@10.5.2",
   "description": "Power-packed wrapper over cropperjs@next",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "homepage": "https://github.com/NamesMT/vue-modern-cropper",
@@ -39,7 +39,7 @@
     "prerelease": "pnpm run build:lib"
   },
   "peerDependencies": {
-    "cropperjs": "2.0.0-rc.1"
+    "cropperjs": "^2.0.0"
   },
   "peerDependenciesMeta": {
     "cropperjs": {
@@ -47,33 +47,37 @@
     }
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.27.1",
-    "@iconify-json/tabler": "^1.1.120",
+    "@antfu/eslint-config": "^4.3.0",
+    "@iconify-json/tabler": "^1.2.16",
     "@types/clean-css": "^4.2.11",
-    "@types/node": "^20.16.1",
-    "@unocss/eslint-plugin": "^0.62.2",
-    "@unocss/reset": "^0.62.2",
-    "@vitejs/plugin-vue": "^5.1.2",
-    "@vue/tsconfig": "^0.5.1",
-    "@vueuse/core": "^11.0.1",
+    "@types/node": "^20.17.22",
+    "@unocss/eslint-plugin": "^66.0.0",
+    "@unocss/reset": "^66.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "@vueuse/core": "^12.7.0",
     "clean-css": "^5.3.3",
-    "eslint": "^9.9.1",
-    "highlight.js": "^11.10.0",
-    "sass": "^1.77.8",
-    "type-fest": "^4.25.0",
-    "typescript": "^5.5.4",
-    "unocss": "^0.62.2",
-    "unplugin-icons": "^0.19.2",
-    "unplugin-vue-components": "^0.27.4",
-    "vite": "^5.4.2",
-    "vue": "^3.4.38",
-    "vue-tsc": "^2.0.29"
+    "eslint": "^9.21.0",
+    "highlight.js": "^11.11.1",
+    "sass": "^1.85.1",
+    "type-fest": "^4.36.0",
+    "typescript": "^5.8.2",
+    "unocss": "^66.0.0",
+    "unplugin-icons": "^22.1.0",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^6.2.0",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
   },
   "pnpm": {
     "overrides": {
-      "hasown": "npm:@nolyfill/hasown@^1",
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
-      "isarray": "npm:@nolyfill/isarray@^1"
-    }
+      "hasown": "npm:@nolyfill/hasown@^1.0.29",
+      "is-core-module": "npm:@nolyfill/is-core-module@^1.0.39",
+      "isarray": "npm:@nolyfill/isarray@^1.0.29"
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }
