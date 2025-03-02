@@ -1,3 +1,19 @@
+## v1.6.9
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.0.0...v1.6.9)
+
+### 📖 Documentation
+
+- Update README ([2907d31](https://github.com/NamesMT/vue-modern-cropper/commit/2907d31))
+
+### 🏡 Chore
+
+- Bump the package version just for fun ([bc0f8be](https://github.com/NamesMT/vue-modern-cropper/commit/bc0f8be))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.0.0
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v0.2.12...v1.0.0)
