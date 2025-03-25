@@ -55,6 +55,8 @@ import { ModernCropper } from 'vue-modern-cropper'
 
 // Use InstanceType to infer the exposed props
 const cropper = ref<InstanceType<typeof ModernCropper>>()
+// Or better, use `useTemplateRef` (vue 3.5+)
+// const cropper = useTemplateRef('cropper')
 
 onMounted(async () => {
   // remember to await nextTick if you use Nuxt (Nuxt client-component caveat)

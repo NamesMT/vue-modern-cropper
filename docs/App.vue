@@ -1,6 +1,6 @@
 <!-- eslint-disable no-console -->
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, useTemplateRef } from 'vue'
 import { ModernCropper } from '~/index'
 import { isDark, toggleDarkmode } from '@/composables/useDarkmode'
 
@@ -19,7 +19,7 @@ sleep(5000).then(async () => {
   await sleep(100)
   imgSrc.value = 'https://i.imgur.com/ISGwgk9.png'
 })
-const cropper = ref<InstanceType<typeof ModernCropper>>()
+const cropper = useTemplateRef('cropper')
 
 onMounted(async () => {
   console.log('Hi!', 'mount state:', cropper.value?.cropperMounted)
@@ -45,7 +45,7 @@ Vue.component(ModernCropper)
 ${importSnippet}
 
 // Use InstanceType to infer the exposed props
-const cropper = ref<InstanceType<typeof ModernCropper>>()
+const cropper = useTemplateRef('cropper')
 
 onMounted(async () => {
   // remember to await nextTick if you use Nuxt (Nuxt client component caveat)
@@ -140,7 +140,7 @@ onMounted(async () => {
       </main>
 
       <div class="my-2 text-primary">
-        Check out cropperjs@next document: <a href="https://fengyuanchen.github.io/cropperjs/v2/api/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/v2/api/</a>
+        Check out cropperjs's document: <a href="https://fengyuanchen.github.io/cropperjs/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/</a>
         <div class="flex items-center justify-center">
           <ModernCropper
             ref="cropper"
