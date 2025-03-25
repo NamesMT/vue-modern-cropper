@@ -1,3 +1,16 @@
+## v1.6.10
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.6.9...v1.6.10)
+
+### 🏡 Chore
+
+- Update deps ([a784a56](https://github.com/NamesMT/vue-modern-cropper/commit/a784a56))
+- `useTemplateRef` and document href ([7287ef1](https://github.com/NamesMT/vue-modern-cropper/commit/7287ef1))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.6.9
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.0.0...v1.6.9)
