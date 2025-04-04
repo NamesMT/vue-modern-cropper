@@ -1,3 +1,20 @@
+## v1.7.3
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.2...v1.7.3)
+
+### 🩹 Fixes
+
+- Full attributes are re-assign upon reactivity ([f36f35e](https://github.com/NamesMT/vue-modern-cropper/commit/f36f35e))
+
+### 📖 Documentation
+
+- Reword the tips a bit ([5023179](https://github.com/NamesMT/vue-modern-cropper/commit/5023179))
+- Adjust docs ([90a6825](https://github.com/NamesMT/vue-modern-cropper/commit/90a6825))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.7.2
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.1...v1.7.2)
