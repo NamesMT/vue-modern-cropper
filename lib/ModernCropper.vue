@@ -53,6 +53,8 @@ const {
   passThrough?: PassThroughOptions
 }>()
 
+const pixelData = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+
 function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliseconds) })
 }
@@ -106,7 +108,9 @@ onCropperMounted(({ image }) => {
 
   // Watch src and replace / recenter
   watch(() => src, (newSrc) => {
-    image.$image.src = newSrc
+    if (!newSrc)
+      console.warn(`[ModernCropper]: 'src' is empty, will fallback to pixel data to avoid error fetch.`)
+    image.$image.src = newSrc || pixelData
     image.$ready(() => sleep(0).then(() => image.$center('contain')))
   }, { immediate: true })
 })
@@ -188,7 +192,7 @@ defineExpose(reactive({
 
 <template>
   <div class="modern-cropper__wrapper">
-    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" v-bind="{ id, crossorigin }">
+    <img :src="pixelData" v-bind="{ id, crossorigin }">
   </div>
 </template>
 
