@@ -1,3 +1,15 @@
+## v1.7.2
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.1...v1.7.2)
+
+### 🩹 Fixes
+
+- Event attributes support ([c7e7c09](https://github.com/NamesMT/vue-modern-cropper/commit/c7e7c09))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.7.1
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.0...v1.7.1)
