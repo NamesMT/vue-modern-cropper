@@ -81,9 +81,15 @@ onMounted(async () => {
     cropper: { constructOptions: undefined },
     image: { attributes: { class: 'blur' } },
     canvas: { attributes: { background: false } },
-    selection: { attributes: undefined },
+    selection: { attributes: { id: 'cropper-selection-86' } },
     selections: { attributes: undefined },
   }"
+/>
+
+// To creates a 'cropper-viewer' component
+<component 
+  v-if="cropper?.cropperMounted" 
+  :is="h('cropper-viewer', { selection: '#cropper-selection-86' })"
 />
 ...
 

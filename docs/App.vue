@@ -1,6 +1,6 @@
 <!-- eslint-disable no-console -->
 <script lang="ts" setup>
-import { onMounted, ref, useTemplateRef } from 'vue'
+import { onMounted, ref, useTemplateRef, h } from 'vue'
 import { ModernCropper } from '~/index'
 import { isDark, toggleDarkmode } from '@/composables/useDarkmode'
 
@@ -69,9 +69,15 @@ onMounted(async () => {
     cropper: { constructOptions: undefined },
     image: { attributes: { class: 'blur' } },
     canvas: { attributes: { background: false } },
-    selection: { attributes: undefined },
+    selection: { attributes: { id: 'cropper-selection-86' } },
     selections: { attributes: undefined },
   }"
+/>
+
+// To creates a 'cropper-viewer' component
+<component 
+  v-if="cropper?.cropperMounted" 
+  :is="h('cropper-viewer', { selection: '#cropper-selection-86' })"
 />
 ...
 `
@@ -139,9 +145,12 @@ onMounted(async () => {
         <Highlight :autodetect="false" language="javascript" :code="demoCode0" />
       </main>
 
-      <div class="my-2 text-primary">
+      <div class="my-2 text-primary flex flex-col gap-4">
         Check out cropperjs's document: <a href="https://fengyuanchen.github.io/cropperjs/" class="text-#3399ff">https://fengyuanchen.github.io/cropperjs/</a>
-        <div class="flex items-center justify-center">
+
+        <hr>
+
+        <div class="flex items-center justify-center gap-10">
           <ModernCropper
             ref="cropper"
             class="h-40 w-80"
@@ -150,10 +159,17 @@ onMounted(async () => {
               cropper: { constructOptions: undefined },
               image: { attributes: { class: 'blur' } },
               canvas: { attributes: { background: false } },
-              selection: { attributes: undefined },
+              selection: { attributes: { id: 'cropper-selection-69' } },
               selections: { attributes: undefined },
             }"
           />
+
+          <div class="w-80 h-40 overflow-hidden">
+            <component 
+              v-if="cropper?.cropperMounted" 
+              :is="h('cropper-viewer', { selection: '#cropper-selection-69' })"
+            />
+          </div>
         </div>
       </div>
 
