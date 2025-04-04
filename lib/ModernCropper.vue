@@ -102,7 +102,7 @@ onMounted(async () => {
   hooksList = []
 })
 
-// process top-level props
+// process top-level props (i.e: src, crossorigin)
 onCropperMounted(({ image }) => {
   image.$image.crossOrigin = crossorigin
 
@@ -120,7 +120,59 @@ onCropperMounted(({ image }) => {
   }, { immediate: true })
 })
 
-function setElementAttributes(element: HTMLElement, attributes: Record<any, any>) {
+// process passThrough options
+onCropperMounted(({ image, canvas, selection, selections }) => {
+  watch(
+    () => passThrough?.image,
+    (newImagePassThrough) => {
+      if (newImagePassThrough?.attributes)
+        _setElementAttributes(image, newImagePassThrough.attributes)
+    },
+    { deep: true, immediate: true },
+  )
+
+  watch(
+    () => passThrough?.canvas,
+    (newCanvasPassThrough) => {
+      if (newCanvasPassThrough?.attributes)
+        _setElementAttributes(canvas, newCanvasPassThrough.attributes)
+    },
+    { deep: true, immediate: true },
+  )
+
+  watch(
+    () => passThrough?.selection,
+    (newSelectionPassThrough) => {
+      if (newSelectionPassThrough?.attributes)
+        _setElementAttributes(selection, newSelectionPassThrough.attributes)
+    },
+    { deep: true, immediate: true },
+  )
+
+  watch(
+    () => passThrough?.selections,
+    (newSelectionsPassThrough) => {
+      if (newSelectionsPassThrough?.attributes)
+        selections.forEach(selection => _setElementAttributes(selection, newSelectionsPassThrough.attributes!))
+    },
+    { deep: true, immediate: true },
+  )
+})
+
+type DiscriminatedExpose = { onCropperMounted: typeof onCropperMounted }
+  & (
+    ({ cropperMounted: false } & typeof cropperKeys) |
+    ({ cropperMounted: true } & MountedCropperKeys)
+  )
+
+defineExpose(reactive({
+  ...toRefs(cropperKeys),
+
+  cropperMounted,
+  onCropperMounted,
+}) as DiscriminatedExpose)
+
+function _setElementAttributes(element: HTMLElement, attributes: Record<any, any>) {
   let doReset = false
 
   Object.entries(attributes).forEach(([attribute, value]) => {
@@ -142,57 +194,6 @@ function setElementAttributes(element: HTMLElement, attributes: Record<any, any>
     element.$reset()
   }
 }
-// process passThrough options
-onCropperMounted(({ image, canvas, selection, selections }) => {
-  watch(
-    () => passThrough?.image,
-    (newImagePassThrough) => {
-      if (newImagePassThrough?.attributes)
-        setElementAttributes(image, newImagePassThrough.attributes)
-    },
-    { deep: true, immediate: true },
-  )
-
-  watch(
-    () => passThrough?.canvas,
-    (newCanvasPassThrough) => {
-      if (newCanvasPassThrough?.attributes)
-        setElementAttributes(canvas, newCanvasPassThrough.attributes)
-    },
-    { deep: true, immediate: true },
-  )
-
-  watch(
-    () => passThrough?.selection,
-    (newSelectionPassThrough) => {
-      if (newSelectionPassThrough?.attributes)
-        setElementAttributes(selection, newSelectionPassThrough.attributes)
-    },
-    { deep: true, immediate: true },
-  )
-
-  watch(
-    () => passThrough?.selections,
-    (newSelectionsPassThrough) => {
-      if (newSelectionsPassThrough?.attributes)
-        selections.forEach(selection => setElementAttributes(selection, newSelectionsPassThrough.attributes!))
-    },
-    { deep: true, immediate: true },
-  )
-})
-
-type DiscriminatedExpose = { onCropperMounted: typeof onCropperMounted }
-  & (
-    ({ cropperMounted: false } & typeof cropperKeys) |
-    ({ cropperMounted: true } & MountedCropperKeys)
-  )
-
-defineExpose(reactive({
-  ...toRefs(cropperKeys),
-
-  cropperMounted,
-  onCropperMounted,
-}) as DiscriminatedExpose)
 </script>
 
 <template>
