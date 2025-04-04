@@ -11,6 +11,9 @@
 [bundlePhobiaBadge]: https://img.shields.io/bundlephobia/minzip/vue-modern-cropper
 [bundlePhobiaUrl]: https://bundlephobia.com/package/vue-modern-cropper@latest
 
+> It's mid 2024, I've been searching, installing, and trying all, everything, but I can't find a maintained/bug-free, easy to use cropper component library for Vue -- (╯°□°)╯︵ ┻━┻  
+So I created this.
+
 > Power-packed wrapper over cropperjs@next
 
 ## Table of Contents
@@ -22,6 +25,7 @@
 - [Vue Modern Cropper](#vue-modern-cropper)
   - [Table of Contents](#table-of-contents)
   - [NOTE!!](#note)
+  - [Features](#features)
   - [Usage](#usage)
     - [Install](#install)
     - [Use](#use)
@@ -30,11 +34,14 @@
 </details>
 
 ## NOTE!!
-`vue-modern-cropper` uses `cropperjs` (v2), you can check it's documentation [HERE](https://fengyuanchen.github.io/cropperjs/)
+`vue-modern-cropper` is a small wrapper over `cropperjs` (v2), improving ease of use and DX, while still preversing it's full customizability power, you can check it's documentation [HERE](https://fengyuanchen.github.io/cropperjs/)
 
 At its current state, `cropperjs` is not SSR-friendly, though, even if it's SSR-able, I think it would be better to render it client-only to avoid overhead on the server, so remember to wrap/mark the component as `ClientOnly` if your project have SSR-enabled.
 
-Feel free to submit PRs to add helper functions 😘.
+Feel free to submit PRs to improve DX even more 😘.
+
+## Features
++ 🔥 Import and use, typed component with discriminated union support
 
 ## Usage
 ### Install

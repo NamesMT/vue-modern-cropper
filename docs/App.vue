@@ -115,7 +115,7 @@ onMounted(async () => {
         <div class="py-4 text-xl text-slate-700 font-semibold italic dark:text-slate-200">
           <p>Why "modern cropper"?</p>
           <p>
-            It's mid 2024, I been searching, installing, trying all everything and can't find a maintained/bug-free,
+            It's mid 2024, I've been searching, installing, and trying all, everything, but I can't find a maintained/bug-free,
             easy to use cropper component library for Vue -- <span class="whitespace-nowrap">(╯°□°)╯︵ ┻━┻</span>
           </p>
           <p>So I created this.</p>
