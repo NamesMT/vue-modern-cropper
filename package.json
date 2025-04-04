@@ -2,7 +2,7 @@
   "name": "vue-modern-cropper",
   "type": "module",
   "version": "1.6.10",
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.7.1",
   "description": "Power-packed wrapper over cropperjs@next",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "homepage": "https://github.com/NamesMT/vue-modern-cropper",
@@ -50,7 +50,7 @@
     "@antfu/eslint-config": "^4.11.0",
     "@iconify-json/tabler": "^1.2.17",
     "@types/clean-css": "^4.2.11",
-    "@types/node": "^20.17.27",
+    "@types/node": "^20.17.30",
     "@unocss/eslint-plugin": "^66.0.0",
     "@unocss/reset": "^66.0.0",
     "@vitejs/plugin-vue": "^5.2.3",
@@ -59,19 +59,19 @@
     "clean-css": "^5.3.3",
     "eslint": "^9.23.0",
     "highlight.js": "^11.11.1",
-    "sass": "^1.86.0",
-    "type-fest": "^4.38.0",
+    "sass": "^1.86.3",
+    "type-fest": "^4.39.1",
     "typescript": "^5.8.2",
     "unocss": "^66.0.0",
     "unplugin-icons": "^22.1.0",
     "unplugin-vue-components": "^28.4.1",
-    "vite": "^6.2.3",
+    "vite": "^6.2.5",
     "vue": "^3.5.13",
     "vue-tsc": "^2.2.8"
   },
   "pnpm": {
     "overrides": {
-      "is-core-module": "npm:@nolyfill/is-core-module@^1"
+      "is-core-module": "npm:@nolyfill/is-core-module@^1.0.39"
     },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
