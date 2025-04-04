@@ -6,7 +6,7 @@ import type { SetNonNullable } from 'type-fest'
 
 export interface PassThroughOptions {
   /**
-   * The new Cropper() class construction
+   * The `new Cropper()` class construction
    */
   cropper?: { constructOptions?: CropperOptions }
 
@@ -182,30 +182,35 @@ function _setElementAttributes(element: HTMLElement, attributes: Record<any, any
   let doReset = false
 
   Object.entries(attributes).forEach(([attribute, value]) => {
-    if (value === undefined)
+    // Convert camelCase to kebab-case
+    const _attribute = attribute.replaceAll(/([a-z])([A-Z])/g, (_match, p1: string, p2: string) => `${p1}-${p2.toLowerCase()}`) as keyof HTMLElement
+    const currentValue = element[_attribute] ?? element.getAttribute(_attribute)
+
+    if (value === undefined || currentValue === value)
       return
 
-    if (attribute.includes('initial') && resetOnInitialAttributes)
+    if (_attribute.includes('initial') && resetOnInitialAttributes)
       doReset = true
 
     if (value === false || value === null)
-      return element.removeAttribute(attribute)
+      return element.removeAttribute(_attribute)
 
     // Handle event attributes
-    if (/^on[a-z]+$/.test(attribute)) {
+    if (/^on[a-z]+$/.test(_attribute)) {
       if (useEventListeners)
-        element.addEventListener(attribute.replace(/^on/, ''), value)
-      else
-        // @ts-expect-error index signature unknown
-        element[attribute] = value
+        element.addEventListener(_attribute.replace(/^on/, ''), value)
+      else {
+        // @ts-expect-error cannot assign to readonly property
+        element[_attribute] = value
+      }
       return
     }
 
-    element.setAttribute(attribute.replaceAll(/([a-z])([A-Z])/g, (_match, p1: string, p2: string) => `${p1}-${p2.toLowerCase()}`), value)
+    element.setAttribute(_attribute, value)
   })
 
   if (doReset) {
-    console.warn(`[ModernCropper]: "initial"-type attribute detected, will call $reset(), but the selection may disappear due to https://github.com/fengyuanchen/cropperjs/issues/1157`)
+    console.warn(`[ModernCropper]: "initial"-type attribute detected, will call $reset()`)
     // @ts-expect-error $reset don't exist on HTMLElement
     element.$reset()
   }
