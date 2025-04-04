@@ -86,7 +86,7 @@ onMounted(async () => {
   }"
 />
 
-// To creates a 'cropper-viewer' component
+// Tips: to use custom cropper components without setting `isCustomElement` config:
 <component 
   v-if="cropper?.cropperMounted" 
   :is="h('cropper-viewer', { selection: '#cropper-selection-86' })"
