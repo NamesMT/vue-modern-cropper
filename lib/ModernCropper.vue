@@ -110,8 +110,13 @@ onCropperMounted(({ image }) => {
   watch(() => src, (newSrc) => {
     if (!newSrc)
       console.warn(`[ModernCropper]: 'src' is empty, will fallback to pixel data to avoid error fetch.`)
-    image.$image.src = newSrc || pixelData
+    const _newSrc = newSrc || pixelData
+
+    image.setAttribute('src', _newSrc)
     image.$ready(() => sleep(0).then(() => image.$center('contain')))
+
+    // Optional but nice to have, also change `src` of the original <img> element
+    document.getElementById(id)?.setAttribute('src', _newSrc)
   }, { immediate: true })
 })
 
