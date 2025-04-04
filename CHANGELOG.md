@@ -1,3 +1,19 @@
+## v1.7.0
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.6.10...v1.7.0)
+
+### 🚀 Enhancements
+
+- Fallback to `pixelData` when user sets an empty `src` ([40caf74](https://github.com/NamesMT/vue-modern-cropper/commit/40caf74))
+
+### 🏡 Chore
+
+- Update deps ([be6603b](https://github.com/NamesMT/vue-modern-cropper/commit/be6603b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.6.10
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.6.9...v1.6.10)
