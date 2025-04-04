@@ -1,3 +1,23 @@
+## v1.7.1
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.0...v1.7.1)
+
+### 🩹 Fixes
+
+- `src` reactivity does not work with `cropper-viewer` ([59cd46f](https://github.com/NamesMT/vue-modern-cropper/commit/59cd46f))
+
+### 💅 Refactors
+
+- Minor code movement ([ceec10e](https://github.com/NamesMT/vue-modern-cropper/commit/ceec10e))
+
+### 📖 Documentation
+
+- Add tutorial to creates a `cropper-viewer` ([eccf764](https://github.com/NamesMT/vue-modern-cropper/commit/eccf764))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.7.0
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.6.10...v1.7.0)
