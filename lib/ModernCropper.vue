@@ -37,6 +37,7 @@ const {
   crossorigin = 'anonymous',
 
   resetOnInitialAttributes = true,
+  useEventListeners = false,
 
   passThrough,
 } = defineProps<{
@@ -49,6 +50,11 @@ const {
    * @default true
    */
   resetOnInitialAttributes?: boolean
+  /**
+   * Use event listeners instead of direct property assignment for event attributes (onchange etc)
+   * @default false
+   */
+  useEventListeners?: boolean
 
   passThrough?: PassThroughOptions
 }>()
@@ -184,6 +190,16 @@ function _setElementAttributes(element: HTMLElement, attributes: Record<any, any
 
     if (value === false || value === null)
       return element.removeAttribute(attribute)
+
+    // Handle event attributes
+    if (/^on[a-z]+$/.test(attribute)) {
+      if (useEventListeners)
+        element.addEventListener(attribute.replace(/^on/, ''), value)
+      else
+        // @ts-expect-error index signature unknown
+        element[attribute] = value
+      return
+    }
 
     element.setAttribute(attribute.replaceAll(/([a-z])([A-Z])/g, (_match, p1: string, p2: string) => `${p1}-${p2.toLowerCase()}`), value)
   })
