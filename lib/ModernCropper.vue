@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CropperOptions } from 'cropperjs'
 import Cropper from 'cropperjs'
-import { nextTick, onMounted, reactive, ref, toRefs, watch } from 'vue'
+import { nextTick, onMounted, onUnmounted, reactive, ref, toRefs, useId, watch } from 'vue'
 import type { SetNonNullable } from 'type-fest'
 
 export interface PassThroughOptions {
@@ -32,7 +32,7 @@ export interface PassThroughOptions {
 }
 
 const {
-  id = `ModernCropper${Math.random()}`,
+  id = `ModernCropper${useId()}`,
   src = '',
   crossorigin = 'anonymous',
 
@@ -106,6 +106,10 @@ onMounted(async () => {
   cropperMounted.value = true
   hooksList.forEach(callHook)
   hooksList = []
+})
+
+onUnmounted(() => {
+  cropper.value?.destroy()
 })
 
 // process top-level props (i.e: src, crossorigin)
