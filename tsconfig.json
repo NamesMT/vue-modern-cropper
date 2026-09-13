@@ -2,7 +2,6 @@
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
-    "baseUrl": "./",
     "paths": {
       "~/*": ["./lib/*"],
       "@/*": ["./docs/*"]
