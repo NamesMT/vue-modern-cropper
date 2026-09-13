@@ -110,7 +110,7 @@ onMounted(async () => {
           </div>
         </div>
         <div class="py-4 text-2xl text-slate-700 font-semibold dark:text-slate-200">
-          Power-packed wrapper over cropperjs@next
+          Power-packed wrapper over cropperjs
         </div>
         <div class="py-4 text-xl text-slate-700 font-semibold italic dark:text-slate-200">
           <p>Why "modern cropper"?</p>
