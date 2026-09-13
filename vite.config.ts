@@ -41,11 +41,11 @@ export default defineConfig(({ command: _command, mode }) => {
     userConfig.build = {
       target: 'esnext',
       lib: {
-        entry: resolve(__dirname, 'lib/index.ts'),
+        entry: resolve(import.meta.dirname, 'lib/index.ts'),
         name: 'ModernCropper',
         fileName: 'vue-modern-cropper',
       },
-      outDir: resolve(__dirname, './dist'),
+      outDir: resolve(import.meta.dirname, './dist'),
       emptyOutDir: true,
       cssCodeSplit: false,
       sourcemap: true,
@@ -101,12 +101,12 @@ export default defineConfig(({ command: _command, mode }) => {
   return {
     root: './docs',
     build: {
-      outDir: resolve(__dirname, './dist-docs'),
+      outDir: resolve(import.meta.dirname, './dist-docs'),
     },
     resolve: {
       alias: {
-        '@': resolve(__dirname, './docs'),
-        '~': resolve(__dirname, './lib'),
+        '@': resolve(import.meta.dirname, './docs'),
+        '~': resolve(import.meta.dirname, './lib'),
       },
     },
     plugins: [...commonPlugins],
