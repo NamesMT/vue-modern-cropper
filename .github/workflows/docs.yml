@@ -34,12 +34,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - uses: pnpm/action-setup@v6
-        with:
-          version: 8
-          run_install: true
+
+      - run: pnpm install --frozen-lockfile
 
       - run: pnpm run build:docs
 
