@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.7.3",
   "packageManager": "pnpm@12.4.1",
-  "description": "Power-packed wrapper over cropperjs@next",
+  "description": "Power-packed wrapper over cropperjs",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "homepage": "https://github.com/NamesMT/vue-modern-cropper",
   "repository": {
