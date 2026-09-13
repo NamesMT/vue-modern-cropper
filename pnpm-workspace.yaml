@@ -1,7 +1,12 @@
+minimumReleaseAge: 0
+minimumReleaseAgeExcludePrune: true
+trustPolicy: no-downgrade
+shellEmulator: true
+
 overrides:
   is-core-module: npm:@nolyfill/is-core-module@^1.0.39
+
 allowBuilds:
-  "@parcel/watcher": true
+  '@parcel/watcher': true
   esbuild: true
   simple-git-hooks: true
-minimumReleaseAge: 0

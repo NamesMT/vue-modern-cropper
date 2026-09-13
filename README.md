@@ -14,7 +14,7 @@
 > It's mid 2024, I've been searching, installing, and trying all, everything, but I can't find a maintained/bug-free, easy to use cropper component library for Vue -- (╯°□°)╯︵ ┻━┻  
 So I created this.
 
-> Power-packed wrapper over cropperjs@next
+> Power-packed wrapper over cropperjs
 
 ## Table of Contents
 
