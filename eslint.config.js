@@ -4,7 +4,7 @@ export default antfu(
   {
     unocss: true,
     vue: true,
-    ignores: ['docs', 'lib'],
+    ignores: ['docs'],
   },
   {
     rules: {

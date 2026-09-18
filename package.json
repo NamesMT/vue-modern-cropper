@@ -35,6 +35,7 @@
     "build:lib": "vite build --mode lib && vue-tsc -p tsconfig.build.json",
     "build": "pnpm run build:lib",
     "preview": "vite preview",
+    "lint": "eslint .",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
     "prerelease": "pnpm run build:lib"
   },
