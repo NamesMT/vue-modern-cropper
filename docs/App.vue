@@ -123,22 +123,6 @@ onMounted(async () => {
             btw, <a href="https://github.com/NamesMT/nuxt-modern-cropper" class="text-lime">there's also a module for <b class="text-xl text-#00DC82">Nuxt</b></a>
           </p>
         </div>
-        <!-- <div class="flex gap-4 mt-8">
-          <a
-            class="bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold py-3 px-6 w-full sm:w-auto text-center"
-            href="https://github.com/NamesMT/vue-modern-cropper"
-            target="_blank"
-          >
-            <span>See Github repo</span>
-          </a>
-          <a
-            class="bg-emerald-400 hover:bg-emerald-500 flex items-center justify-center space-x-3 transition rounded-full text-white text-lg font-semibold py-3 px-6 w-full sm:w-auto cursor-pointer"
-            href="https://github.com/new?template_name=vue-modern-cropper&template_owner=NamesMT"
-            target="_blank"
-          >
-            <span>Use the template</span>
-          </a>
-        </div> -->
       </header>
 
       <main class="grid grid-cols-1 gap-8 text-xs 2xl:text-sm">
@@ -174,10 +158,6 @@ onMounted(async () => {
       </div>
 
       <footer class="[&_a]:text-primary-600 [&_a]:dark:text-primary-300 mt-16 w-full" text="slate-900 dark:slate-300 opacity-60 sm">
-        <div class="mb-2 flex justify-center">
-          <ThemeToggle />
-        </div>
-
         <div class="copyright flex flex-col items-center justify-center">
           <p>
             Code with ❤ & ☕️ by
