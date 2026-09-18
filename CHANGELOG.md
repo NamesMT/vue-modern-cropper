@@ -1,3 +1,38 @@
+## v1.8.0
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.3...v1.8.0)
+
+### 🩹 Fixes
+
+- Use relative paths (drop deprecated baseUrl) ([e629a5b](https://github.com/NamesMT/vue-modern-cropper/commit/e629a5b))
+- Destroy cropper instance on unmount, use useId() for default id ([1f26127](https://github.com/NamesMT/vue-modern-cropper/commit/1f26127))
+
+### 💅 Refactors
+
+- Rename CSS injection helper and lint the lib source ([12f5701](https://github.com/NamesMT/vue-modern-cropper/commit/12f5701))
+
+### 📖 Documentation
+
+- Remove stale "@next" from cropperjs description ([91025dd](https://github.com/NamesMT/vue-modern-cropper/commit/91025dd))
+- Remove dead ThemeToggle and template button block ([1c997bb](https://github.com/NamesMT/vue-modern-cropper/commit/1c997bb))
+
+### 🏡 Chore
+
+- Migrate to pnpm 12 ([56b7f3c](https://github.com/NamesMT/vue-modern-cropper/commit/56b7f3c))
+- Use import.meta.dirname instead of deprecated __dirname in vite config ([7b00459](https://github.com/NamesMT/vue-modern-cropper/commit/7b00459))
+
+### 🤖 CI
+
+- Use pnpm/action-setup for pnpm 12 ([d1ff04b](https://github.com/NamesMT/vue-modern-cropper/commit/d1ff04b))
+- Fix pnpm/node versions (node 22, drop pnpm 8 pin) ([a174bff](https://github.com/NamesMT/vue-modern-cropper/commit/a174bff))
+- Bump GitHub Actions to latest majors, Node to 24 ([78c92f6](https://github.com/NamesMT/vue-modern-cropper/commit/78c92f6))
+- Standardize workflow action versions and node version ([6e720d4](https://github.com/NamesMT/vue-modern-cropper/commit/6e720d4))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+- Claude <noreply@anthropic.com>
+
 ## v1.7.3
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.2...v1.7.3)
