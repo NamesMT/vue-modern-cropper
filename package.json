@@ -37,7 +37,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
-    "prerelease": "pnpm run build:lib"
+    "prerelease": "pnpm run build:lib",
+    "prepublishOnly": "pnpm run build:lib"
   },
   "peerDependencies": {
     "cropperjs": "^2.0.0"
