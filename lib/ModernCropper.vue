@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { CropperOptions } from 'cropperjs'
+import type { SetNonNullable } from 'type-fest'
 import Cropper from 'cropperjs'
 import { nextTick, onMounted, onUnmounted, reactive, ref, toRefs, useId, watch } from 'vue'
-import type { SetNonNullable } from 'type-fest'
 
 export interface PassThroughOptions {
   /**
@@ -171,8 +171,8 @@ onCropperMounted(({ image, canvas, selection, selections }) => {
 
 type DiscriminatedExpose = { onCropperMounted: typeof onCropperMounted }
   & (
-    ({ cropperMounted: false } & typeof cropperKeys) |
-    ({ cropperMounted: true } & MountedCropperKeys)
+    ({ cropperMounted: false } & typeof cropperKeys)
+    | ({ cropperMounted: true } & MountedCropperKeys)
   )
 
 defineExpose(reactive({
@@ -201,8 +201,9 @@ function _setElementAttributes(element: HTMLElement, attributes: Record<any, any
 
     // Handle event attributes
     if (/^on[a-z]+$/.test(_attribute)) {
-      if (useEventListeners)
+      if (useEventListeners) {
         element.addEventListener(_attribute.replace(/^on/, ''), value)
+      }
       else {
         // @ts-expect-error cannot assign to readonly property
         element[_attribute] = value
