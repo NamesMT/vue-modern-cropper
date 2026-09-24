@@ -29,6 +29,7 @@ So I created this.
   - [Usage](#usage)
     - [Install](#install)
     - [Use](#use)
+  - [Releasing](#releasing)
   - [License](#license)
 
 </details>
@@ -101,6 +102,26 @@ onMounted(async () => {
 ...
 
 ```
+
+## Releasing
+
+Releases are version-first and manual. Run **Actions → Release → Run workflow** with the version
+to ship (`.github/workflows/release.yml`): it checks the version, lints, builds, lets changelogen
+bump `package.json` and write `CHANGELOG.md`, creates the release commit and the `v<version>` tag,
+pushes both, creates the GitHub release, and publishes to npm with provenance over OIDC trusted
+publishing. Set `dry-run` to stop before the push, release and publish. A pushed tag on its own
+publishes nothing — there is deliberately no tag-triggered publish workflow.
+
+Local helpers:
+
+```sh
+pnpm run release:check 1.9.0   # validate a version against package.json
+pnpm run release:preview       # print the changelog the next release would get
+```
+
+First-time setup: publish the package once by hand, then on npmjs.com open the package →
+Settings → Trusted Publisher and add this repository with the workflow filename `release.yml`
+(npm only offers a trusted publisher for a package that already exists).
 
 ## License
 

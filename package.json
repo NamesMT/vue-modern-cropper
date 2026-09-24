@@ -36,7 +36,8 @@
     "build": "pnpm run build:lib",
     "preview": "vite preview",
     "lint": "eslint .",
-    "release": "pnpm dlx changelogen@latest --release --push --publish",
+    "release:check": "node scripts/check-release-version.mjs",
+    "release:preview": "pnpm dlx changelogen@latest",
     "prerelease": "pnpm run build:lib",
     "prepublishOnly": "pnpm run build:lib"
   },
