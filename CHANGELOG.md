@@ -1,3 +1,27 @@
+## v1.8.1
+
+[compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.8.0...v1.8.1)
+
+### 🩹 Fixes
+
+- **lib:** Satisfy eslint in ModernCropper.vue ([8bd1ded](https://github.com/NamesMT/vue-modern-cropper/commit/8bd1ded))
+
+### 📖 Documentation
+
+- Add npm metadata and correct repository URL casing ([6e32099](https://github.com/NamesMT/vue-modern-cropper/commit/6e32099))
+
+### 🏡 Chore
+
+- Build the lib before publishing (prepublishOnly) ([7101d5c](https://github.com/NamesMT/vue-modern-cropper/commit/7101d5c))
+
+### 🤖 CI
+
+- **release:** Dispatch releases by hand and add an AGENTS.md ([72af30f](https://github.com/NamesMT/vue-modern-cropper/commit/72af30f))
+
+### ❤️ Contributors
+
+- NamesMT
+
 ## v1.8.0
 
 [compare changes](https://github.com/NamesMT/vue-modern-cropper/compare/v1.7.3...v1.8.0)
