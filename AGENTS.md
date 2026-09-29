@@ -54,3 +54,7 @@ push, GitHub release and npm publish (OIDC; one-time trusted-publisher setup in 
   rebuilt during publishing, after the workflow's own Build step.
 - changelogen runs with `--clean` and fails when `git status --porcelain` is non-empty; the generated
   `dist/`, `dist-docs/` and `docs/components.d.ts` are gitignored and do not count.
+- `docs/index.html` requests `/favicon.svg`, but `public/favicon.svg` sits outside the `root: './docs'` Vite
+  root, so the built site 404s the icon.
+- `lib/ModernCropper.vue` imports `SetNonNullable` from `type-fest`, a dev-only dependency: the emitted
+  `dist/*.d.ts` still references `type-fest`, which consumers cannot resolve.

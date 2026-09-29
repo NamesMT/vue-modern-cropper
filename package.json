@@ -5,17 +5,25 @@
   "packageManager": "pnpm@12.4.1",
   "description": "Power-packed wrapper over cropperjs",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
-  "homepage": "https://github.com/NamesMT/vue-modern-cropper",
+  "homepage": "https://github.com/NamesMT/vue-modern-cropper#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NamesMT/vue-modern-cropper.git"
   },
+  "bugs": "https://github.com/NamesMT/vue-modern-cropper/issues",
   "keywords": [
     "vue",
+    "vue3",
     "cropper",
     "cropperjs",
+    "image-cropper",
     "image",
-    "avatar"
+    "avatar",
+    "crop",
+    "component",
+    "typescript",
+    "esm",
+    "frontend"
   ],
   "exports": {
     ".": {
