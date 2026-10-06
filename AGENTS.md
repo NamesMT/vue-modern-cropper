@@ -38,6 +38,29 @@ pnpm run release:preview     # print the changelog the next release would get
 - Aliases `~/*` → `lib/*` and `@/*` → `docs/*`, in `vite.config.ts` and `tsconfig.json`.
 - Comments explain non-obvious intent, not mechanics.
 
+## How to work here
+
+- **Check who calls it before you change it; if impact is unclear, say so** rather than guessing.
+- **Never overwrite or delete a large section you have not understood.**
+- **Do not invent requirements; surface what looks needed.**
+- **Report the risk, not only the change** — correctness, security, operational, integration.
+- **Fix the root cause, not the instance** — fix the class: one implementation, one formatter, one
+  guard; that is the work, not a follow-up to ask for.
+- **Verify before claiming, and say which direction you checked** — no tests here, so a green lint
+  proves nothing.
+- **Missing recall of this project?** Read this file and `git log` first.
+
+## Conciseness (applies everywhere)
+
+Prune verbose, keep correctness — code, comments, docs alike: a comment only for non-obvious intent,
+one idea per sentence, keep the rule rather than the history `git log` holds. Never drop a caveat to
+save a line.
+
+## User-facing docs
+
+`README.md` and the `docs/` demo are the only places a person reads: concise first read, depth behind
+`<details>` spoilers, visuals for skimmers. Docs ship with the change, in the same commit.
+
 ## Releasing
 
 Version-first and manual: dispatch **Actions → Release → Run workflow** with `X.Y.Z`. `release.yml`
