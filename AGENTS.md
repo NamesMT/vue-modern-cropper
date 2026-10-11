@@ -65,7 +65,8 @@ pnpm run release:preview     # print the changelog the next release would get
 
 ## Conciseness
 
-Prune verbose, keep correctness — code, comments, docs alike: a comment only for non-obvious intent,
+Prune verbose, keep correctness — code, comments, docs alike: a comment only for non-obvious intent, and short — a block arguing
+for its own change is a commit message,
 one idea per sentence, keep the rule rather than the history `git log` holds. Never drop a caveat to
 save a line.
 
